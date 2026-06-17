@@ -3,93 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Menggunakan Bootstrap 5.3.8 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Current Government of Syria</title>
+    <style>
+        .konten-pemerintahan {
+            padding: 60px 0;
+            color: #333;
+            font-family: sans-serif;
+        }
 
-    <title>Exploring Syria - Government</title>
+        .konten-pemerintahan h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+            border-bottom: 3px solid #fc0;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .konten-pemerintahan p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        
+        .card-gov {
+            background: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-gov:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-gov h3 {
+            font-size: 18px;
+            color: #222;
+            border-bottom: 2px solid #fc0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
-    <div id="navbar-placeholder"></div>
+    <header class="bagian-hero-pemerintahan">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="suriah.html">SURIAH</a>
+            </div>
 
-    <main class="konten konten-padded">
-        <!-- Section Header -->
-        <div class="gov-header-block mb-4">
-            <h2 class="custom-culture-title">Current Government of Syria</h2>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" id="tombol-dropdown">General Information</a>
+
+                    <div class="dropdown-content" id="isi-dropdown">
+                        <div class="menu-column">
+                            <h3>Syria at a glance</h3>
+                            <a href="pemerintahan.html">Current Government</a>
+                            <a href="#">About Syria Tourism Board</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Getting around</h3>
+                            <a href="#">Ground Transport</a>
+                            <a href="#">Railroad</a>
+                            <a href="#">Air Transport</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Basics</h3>
+                            <a href="#">Entrance Fees</a>
+                            <a href="#">Visas</a>
+                            <a href="#">Airports</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Values</h3>
+                            <a href="#">Islam</a>
+                            <a href="#">Ramadhan</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Attractions</a></li>
+                <li><a href="#">Hotels & Tours</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-text">
+            <h1>GOVERNMENT</h1>
+            <p>Understanding the political structure and symbols of Syria</p>
+        </div>
+    </header>
+
+
+    <main class="container konten-pemerintahan">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h2>Current Government of Syria</h2>
+                <p>
+                    Republik Arab Suriah adalah negara berbentuk Republik Semipresidensial. 
+                    Berdasarkan konstitusi, sistem pemerintahan di Suriah membagi kekuasaan eksekutif antara Presiden selaku Kepala Negara 
+                    dan Perdana Menteri selaku Kepala Pemerintahan yang memimpin dewan menteri.
+                </p>
+                <p>
+                    Ibu Kota pemerintahan berpusat di Damaskus, yang merupakan salah satu kota tertua di dunia yang terus dihuni hingga saat ini.
+                </p>
+            </div>
         </div>
 
-        <div class="org-chart-container">
-            <div class="org-tree">
-                
-                <div class="org-node node-root">
-                    <span class="node-badge">Konstitusi Suriah</span>
-                    <h3>Kekuasaan Eksekutif</h3>
+
+        <div class="row g-4 mt-2">
+
+            <div class="col-md-4">
+                <div class="card card-gov h-100 p-4">
+                    <h3>Pembagian Wilayah</h3>
+                    <p class="m-0">Secara administratif, Suriah terbagi menjadi <b>14 Provinsi (Governorates)</b> atau disebut <i>Muhafazah</i>. Setiap wilayah dipimpin oleh seorang Gubernur yang ditunjuk langsung oleh Presiden guna menjalankan roda pemerintahan daerah serta mengawasi pembangunan lokal.</p>
                 </div>
-                
-                <div class="org-connector-vertical"></div>
-                
-                <div class="org-branches" id="govBranchesContainer">
-                    
-                    <div class="org-branch">
-                        <div class="org-node node-president">
-                            <div class="node-profile-header">
-                                <div class="node-avatar-frame">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-q2WbwNxW23CnqNzs6Izdyktxhg3r_Zo3X4tCfz-9g&s=10" alt="President Portrait" class="node-avatar">
-                                </div>
-                                <div class="node-profile-meta">
-                                    <span class="node-title">Kepala Negara</span>
-                                    <h3>Presiden</h3>
-                                    <p class="node-summary">Bashar al-Assad</p>
-                                    <small class="text-muted text-center d-block">Masa Jabatan: 7 Tahun</small>
-                                </div>
-                            </div>
-                            
-                            <div class="node-detailed-info">
-                                <hr class="my-3 border-secondary">
-                                <h4 class="duties-heading text-start">Tugas & Fungsi Eksekutif:</h4>
-                                <ul class="text-start ps-3 mb-0 fs-7">
-                                    <li>Panglima Tertinggi Angkatan Bersenjata dan memimpin komando militer negara.</li>
-                                    <li>Mengangkat Wakil Presiden, Perdana Menteri, serta Anggota Dewan Menteri.</li>
-                                    <li>Menentukan arah kebijakan umum strategis luar negeri dan pertahanan nasional.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="org-branch">
-                        <div class="org-node node-pm">
-                            <div class="node-profile-header">
-                                <div class="node-avatar-frame">
-                                    <img src="https://i.namu.wiki/i/k4e6m9pCp-8cKgOLKnPlBsiuo9ZM7h9ATDCO6JcX8jg-IYuvsxcI6ET9ZnTRi49ERnRvjkkYjsPDrjj2RkR-FA.webp" alt="Prime Minister Portrait" class="node-avatar">
-                                </div>
-                                <div class="node-profile-meta">
-                                    <span class="node-title">Kepala Pemerintahan</span>
-                                    <h3>Perdana Menteri</h3>
-                                    <p class="node-summary">Mohammad Ghazi al-Jalali</p>
-                                    <small class="text-muted text-center d-block">Lembaga: Kabinet Menteri</small>
-                                </div>
-                            </div>
-                            
-                            <div class="node-detailed-info">
-                                <hr class="my-3 border-secondary">
-                                <h4 class="duties-heading text-start">Tugas & Fungsi Eksekutif:</h4>
-                                <ul class="text-start ps-3 mb-0 fs-7">
-                                    <li>Mengarahkan, mengawasi, dan mengoordinasikan jalannya rapat kerja Dewan Menteri.</li>
-                                    <li>Memantau jalannya pengesahan serta implementasi instrumen undang-undang negara.</li>
-                                    <li>Mengendalikan pengawasan penuh terhadap operasional lembaga publik sipil nasional.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card card-gov h-100 p-4">
+                    <h3>Lembaga Legislatif</h3>
+                    <p class="m-0">Kekuasaan legislatif di tingkat nasional dipegang oleh <b>Majelis Rakyat (People's Assembly)</b> atau <i>Majlis al-Sha'ab</i> yang berkedudukan di Damaskus. Lembaga unikameral ini beranggotakan 250 orang yang dipilih langsung melalui pemilu setiap 4 tahun sekali.</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card card-gov h-100 p-4">
+                    <h3>Simbol Negara</h3>
+                    <p class="m-0">Bendera Suriah menampilkan warna merah (pengorbanan), putih (kedamaian), dan hitam (sejarah masa lalu), dilengkapi dua bintang hijau yang melambangkan persatuan Arab. Sementara lambang negaranya menggunakan Elang Quraish yang membawa perisai bendera nasional.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+
+    <script>
+        const tombol = document.getElementById('tombol-dropdown');
+        const dropdown = document.getElementById('isi-dropdown');
+
+        tombol.addEventListener('click', function(event) {
+            event.preventDefault();
+            dropdown.classList.toggle('show-menu');
+        });
+    </script>
 </body>
 </html>
