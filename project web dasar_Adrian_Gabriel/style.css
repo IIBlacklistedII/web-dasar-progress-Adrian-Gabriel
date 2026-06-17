@@ -1,49 +1,125 @@
+/* ==========================================================================
+   1. Core Layout & Base Elements
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.konten {
+    padding: 80px 10%; /* Integrated from about.html */
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.konten-padded {
+    padding: 80px 10%;
+}
+
+.konten h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 3px solid #fc0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.konten p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   2. Navigation Header & Custom Mega Dropdowns
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4); 
     padding: 15px 30px;
     position: relative;
+    font-family: sans-serif;
+    z-index: 10000; 
+    transition: background-color 0.3s ease; /* Smooth transition fallback */
 }
 
-.logo a{
-    color: white;
+.navbar.navbar-dark-solid {
+    background-color: #222 !important;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    color: #fc0 !important;
     font-size: 20px;
     font-weight: bold;
+    font-style: italic;
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* CRITICAL: Acts as the structural viewport boundary anchor */
+.custom-dropdown-container {
+    position: static; 
 }
 
 .nav-links li {
     padding-left: 20px;
 }
 
-.nav-links a{
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-
-.dropdown-content {
-    display: none;
+/* Absolute isolated menu wrapper rules */
+.custom-dropdown-menu {
+    display: none; 
     position: absolute;
-    top: 100%;
-    left: 0 !important;   
-    right: 0 !important;  
-    width: 100% !important; 
+    /* Forces the menu to lock directly below the navbar boundary line */
+    top: 100%; 
+    left: 0;
+    right: 0;
+    width: 100%;
     background-color: white;
     padding: 30px 80px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 999;         
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+    /* CRITICAL: Guarantees it floats over images, buttons, and text blocks completely independent */
+    z-index: 10005 !important;         
     gap: 60px;
     justify-content: center;
     box-sizing: border-box; 
+}
+
+.custom-dropdown-menu.show-menu {
+    display: flex !important;
 }
 
 .menu-column {
@@ -61,15 +137,7 @@
     text-align: left; 
 }
 
-.menu-column a{
-    display: block;
-    color: #666;
-    padding: 5px 0;
-    font-size: 14px;
-    text-transform: none;
-}
-
-.dropdown-content .menu-column a {
+.custom-dropdown-menu .menu-column a {
     display: block !important;
     color: #666 !important;
     padding: 5px 0 !important;
@@ -79,140 +147,760 @@
     text-align: left !important;
 }
 
-.dropdown-content .menu-column a:hover {
+.custom-dropdown-menu .menu-column a:hover {
     color: #fc0 !important;
 }
 
-.dropdown-content.show-menu {
-    display: flex !important;
-}
-
-.menu-column {
-    flex: 1;
-    min-width: 150px;
-    max-width: 250px;
-}
-
+/* ==========================================================================
+   3. Hero Components & Vertical Text Carousel
+   ========================================================================== */
 .bagian-hero {
     width: 100%;
     height: 100vh;
-
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('Damascus-bg.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Damascus-bg.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
-
-.bagian-hero-pemerintahan{
-        width: 100%;
-    height: 100vh;
-
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('syria-flag.jpeg ');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
 
 .hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 1200px; 
+    z-index: 5;
 }
 
-.hero-text h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    letter-spacing: 3px;
+/* Side-by-side Layout Framework */
+.hero-sentence-wrapper {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    width: 100%;
+    white-space: nowrap; 
 }
 
-body {
-    background-color: #f4f4f4;
+.hero-static-lead {
+    font-size: 6.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2; 
 }
 
+.hero-tagline {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
 
-.bg-card {
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    position: relative;
-    min-height: 320px;
+/* Vertical Carousel Window Configuration */
+.carousel-vertical {
+    display: inline-block;
+    height: 8.5rem; /* Expanded frame size prevents tall fonts from clipping */
+    width: 500px; /* Ensure full */
+    flex-grow: 1;
     overflow: hidden;
 }
-.bg-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-    z-index: 0;
+
+.carousel-vertical .carousel-inner {
+    height: 100%;
 }
 
+/* CRITICAL FIX: Let Bootstrap handle native block transitions without flex interference */
+.carousel-vertical .carousel-item {
+    transition: transform 0.6s ease-in-out;
+    height: 100%;
+}
+
+/* Vertical Transition Engine Overrides */
+.carousel-vertical .carousel-item-next:not(.carousel-item-start),
+.carousel-vertical .active.carousel-item-end {
+    transform: translate3d(0, 100%, 0);
+}
+
+.carousel-vertical .carousel-item-prev:not(.carousel-item-end),
+.carousel-vertical .active.carousel-item-start {
+    transform: translate3d(0, -100%, 0);
+}
+
+/* CRITICAL FIX: Apply centering to the inner text block to keep transitions clean */
+.carousel-vertical .carousel-item h3 {
+    font-size: 6.5rem;
+    font-weight: 800;
+    color: #fc0; 
+    margin: 0;
+    line-height: 8.5rem; /* Matches container height to center perfectly without overlapping */
+    text-align: left;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-sentence-wrapper {
+        flex-direction: column;
+        align-items: center;
+        white-space: normal;
+        gap: 5px;
+    }
+    .hero-static-lead {
+        font-size: 2.3rem;
+    }
+    .carousel-vertical {
+        height: 3.5rem;
+    }
+    .carousel-vertical .carousel-item h3 {
+        font-size: 2.3rem;
+        line-height: 3.5rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   4. Culture Page Content Intro Elements
+   ========================================================================== */
+.custom-culture-title {
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #fc0;
+    border-radius: 2px;
+}
+
+.pre-content .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    border-left: 3px solid rgba(255, 204, 0, 0.4);
+    padding-left: 20px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.culture-desc {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Custom height restriction for the culture image slider */
+#carouselCulture .carousel-inner {
+    /* Adjust this value to exactly how short you want the slider to be */
+    height: 500px; 
+}
+
+#carouselCulture .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    object-position: center bottom;
+}
+
+@media (max-width: 768px) {
+    .pre-content .lead {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .culture-desc {
+        text-align: center;
+    }
+    
+    #carouselCulture .carousel-inner {
+        height: 250px; 
+    }
+}
+
+/* ==========================================================================
+   5. Interactive Accordion Collapse Cards 
+   ========================================================================== */
+.culture-interactive-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default !important; /* Forces normal cursor style over card */
+}
+
+.culture-interactive-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    transform: translateY(-2px);
+}
+
+.culture-header-trigger {
+    cursor: default !important; /* Forces normal cursor style over heading */
+}
+
+.culture-card-img {
+    width: 100%;
+    height: 240px; /* Enhanced viewable height for vertical stacking */
+    object-fit: cover;
+    object-position: center;
+}
+
+.small-text-justified {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    text-align: justify;
+}
+
+/* Arrow indicator positioning mechanics */
+.toggle-arrow {
+    font-size: 0.85rem;
+    color: #666;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Spin arrow when the target card is expanded active */
+.culture-interactive-card[aria-expanded="true"] .toggle-arrow {
+    transform: rotate(180deg);
+    color: #fc0;
+}
+
+@media (max-width: 576px) {
+    .culture-card-img {
+        height: 180px;
+    }
+    .small-text-justified {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   6. Footer Enhancements & Link States
+   ========================================================================== */
+.bagian-footer {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 50px 10%;
+}
+
+.bagian-footer h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.bagian-footer hr {
+    border-top: 2px solid #fc0;
+    opacity: 1;
+    margin-bottom: 15px;
+    width: 50px;
+}
+
+/* Base style for footer anchors */
+.bagian-footer a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 0;
+    transition: color 0.25s ease;
+    display: inline-block;
+}
+
+/* Hover transition to Golden Yellow */
+.bagian-footer a:hover {
+    color: #fc0 !important;
+}
+
+/* ==========================================================================
+   7. Exploring Syria Content Cards & Gradient Overlays
+   ========================================================================== */
 .bg-card {
-    --overlay-color: rgba(80, 156, 255, 0.35);
-}
-
-.bg-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--overlay-color), rgba(255, 255, 255, 0.02));
-    transform: translateY(100%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.bg-card:hover::after {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.bg-card > * {
     position: relative;
+    height: 550px; /* Uniform dimension framework */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: none;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+    z-index: 1;
+}
+
+/* Permanent subtle dark fallback baseline overlay */
+.bg-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.85) 100%);
     z-index: 2;
+    transition: opacity 0.35s ease;
 }
 
-.bg-card h2 { color: #fff; font-size: 1.25rem; }
-.bg-card .card-content h2.fs-1 {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-}
-.bg-card p { color: rgba(255,255,255,0.95); font-size: 0.875rem; }
-
-.divider {
-    transform: translateY(30px);
+/* Independent Dynamic Hover Overlay Gradient Generator */
+.bg-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Dynamically captures custom --overlay-color assigned in your HTML elements */
+    background: linear-gradient(var(--overlay-color) 100%);
     opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 3;
+    transition: opacity 0.4s ease;
 }
 
-.bg-card:hover .divider {
-    transform: translateY(0);
+/* Illuminates color state shifts on hover */
+.bg-card:hover::after {
     opacity: 1;
 }
 
+#card-title{
+    font-size: 5rem;
+}
+
+/* Card Content Positioning & Transition Layers */
 .card-content {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    z-index: 2;
+    position: relative;
+    z-index: 4;
+    transition: transform 0.35s ease;
+}
+
+.card-content h2 {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .card-details {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
+    position: relative;
+    z-index: 4;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.35s ease;
+}
+
+.card-details p {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.card-details hr {
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin: 10px 0;
+}
+
+/* Elevates and displays text cards systematically when hovering over elements */
+.bg-card:hover .card-details {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   8. Government Organizational Branch Diagram
+   ========================================================================== */
+.org-chart-container {
+    width: 100%;
+    overflow-x: auto; /* Adds a scrollbar on mobile so the layout doesn't crush */
+    padding: 20px 10px;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.org-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 600px; /* Ensures structural spacing remains intact */
+    margin: 0 auto;
+}
+
+/* Individual Content Blocks */
+.org-node {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    max-width: 280px;
+    position: relative;
     z-index: 2;
 }
 
-
-@media (min-width: 768px) {
-    .bg-card { min-height: 360px; }
+.org-node h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #222;
 }
-@media (min-width: 992px) {
-    .bg-card { min-height: 480px; }
+
+.org-node p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Specific Node Themes */
+.node-root {
+    border-color: #222;
+    background: #222;
+    color: #fff;
+}
+.node-root h3 { 
+    color: #222;
+}
+
+.node-president {
+    border-top: 4px solid #fc0; /* Accents the left node branch */
+}
+
+.node-pm {
+    border-top: 4px solid #fc0; /* Accents the right node branch */
+}
+
+/* Label Tags */
+.node-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background: #fc0;
+    color: #222;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.node-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Structural Branch Lines Framework */
+.org-connector-vertical {
+    width: 2px;
+    height: 30px;
+    background: #ccc;
+}
+
+.org-branches {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Generate horizontal connecting bar across child nodes */
+.org-branches::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background: #ccc;
+    z-index: 1;
+}
+
+.org-branch {
+    position: relative;
+    padding-top: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Generate individual short top lines into child cards */
+.org-branch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background: #ccc;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   9. Pure CSS Hover Expansion & Sizing Mechanics
+   ========================================================================== */
+/* Base Node State */
+.org-node {
+    /* WIDENED: Increased from 280px to 320px for a more substantial idle card */
+    width: 320px;
+    
+    /* HEIGHTENED: Increased from 150px to 165px to completely clear the avatar + text */
+    height: fit-content; 
+    
+    padding: 20px 18px; /* Extra interior padding comfort */
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 14px; /* Slightly smoother rounded corners for the larger size */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    position: relative;
+    z-index: 2;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease;
+    will-change: width, height, transform;
+}
+
+/* Force Side-by-Side Left Alignment */
+.node-profile-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 18px !important;
+    width: 100%;
+}
+
+.node-avatar-frame {
+    /* SCALED UP: Increased from 75px to 85px to make the portrait placeholder larger */
+    width: 85px; 
+    height: 85px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid rgba(0,0,0,0.08);
+    margin: 0 !important; 
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Target the actual image element inside the avatar frame container */
+.node-avatar-frame img {
+    width: 100%;
+    height: 100%;
+    
+    /* CRITICAL FIX: Cuts and crops the image cleanly into a perfect square without distortion */
+    object-fit: cover; 
+    
+    /* Centers the crop focal point so the president's face stays perfectly in frame */
+    object-position: center top; 
+}
+
+.node-profile-meta {
+    text-align: left !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.35;
+}
+
+.node-profile-meta h3 {
+    font-size: 1.3rem; /* Slightly larger heading font size */
+    font-weight: 700;
+}
+
+.node-profile-meta .node-title {
+    font-size: 0.8rem;
+}
+
+.node-profile-meta .node-summary {
+    font-size: 0.95rem;
+}
+
+.node-profile-meta h3,
+.node-profile-meta .node-title,
+.node-profile-meta .node-summary,
+.node-profile-meta small {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-bottom: 3px !important;
+}
+
+/* Hidden container state */
+.node-detailed-info {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: opacity 0.2s ease, max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   THE CORNER TRANSFORMATION (Widen + Heighten + Pop)
+   ========================================================================== */
+.org-node:hover {
+    /* WIDENED: Increased from 520px to 580px so list text lines span beautifully */
+    width: 580px !important;   
+    
+    /* DYNAMIC CEILING: Kept at auto so it perfectly contains all long bullet points */
+    height: auto !important;  
+    
+    padding: 25px 30px !important; /* Richer, larger padding spaces when open */
+    border-color: #fc0;
+    transform: scale(1.02); 
+    box-shadow: 0 15px 35px rgba(255, 204, 0, 0.2);
+    z-index: 10;
+}
+
+.org-node:hover .node-detailed-info {
+    opacity: 1;
+    visibility: visible;
+    max-height: 600px;
+    margin-top: 18px;
+    transition-delay: 0.08s; 
+}
+
+/* Upscale avatar even further to match the majestic hovered card presence */
+.org-node:hover .node-avatar-frame {
+    width: 100px;
+    height: 100px;
+    border-color: #fc0;
+}
+
+/* Dim unhovered element nodes */
+.org-branches:hover .org-node {
+    opacity: 0.35;
+    transform: scale(0.95);
+    filter: blur(0.3px);
+}
+
+.org-branches:hover .org-node:hover {
+    opacity: 1;
+    transform: scale(1.02); 
+    filter: none;
+}
+
+/* ==========================================================================
+   History Page Timeline Styles
+   ========================================================================== */
+.timeline-section {
+    padding: 40px 0;
+}
+
+.timeline-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 30px 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* Custom Scrollbar for modern browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #fc0 #f0f0f0;
+}
+
+.timeline-container::-webkit-scrollbar {
+    height: 8px;
+}
+.timeline-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+.timeline-container::-webkit-scrollbar-thumb {
+    background: #fc0;
+    border-radius: 10px;
+}
+
+.timeline-track {
+    display: inline-flex;
+    gap: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Horizontal Connector Line */
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-card {
+    width: 300px;
+    white-space: normal; /* Permits text wrapping inside cards */
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 2;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #fc0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.era-badge {
+    background: #222;
+    color: #fc0;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.timeline-card h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Interactive Quiz Styles
+   ========================================================================== */
+.quiz-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.quiz-option-label {
+    display: block;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.quiz-option-label:hover {
+    background: #f0f1f2;
+    border-color: #ccc;
+}
+
+/* Hide standard radio dials; users just select the stylized button cards */
+.quiz-option-label input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #222;
 }
