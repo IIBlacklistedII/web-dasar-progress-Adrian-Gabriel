@@ -19,20 +19,13 @@ const sharedNavbarLayout = `
                 </div>
                 <div class="menu-column">
                     <h3>Getting around</h3>
-                    <a href="ground.html">Ground Transport</a>
-                    <a href="#">Railroad</a>
-                    <a href="#">Air Transport</a>
+                    <a href="transportasi darat.html">Ground Transport</a>
+                    <a href="transportasi air-laut.html">Air & Water Transport</a>
                 </div>
                 <div class="menu-column">
                     <h3>Basics</h3>
                     <a href="#">Entrance Fees</a>
-                    <a href="#">Visas</a>
-                    <a href="#">Airports</a>
-                </div>
-                <div class="menu-column">
-                    <h3>Values</h3>
-                    <a href="#">Islam</a>
-                    <a href="#">Ramadhan</a>
+                    <a href="visas.html">Visas</a>
                 </div>
             </div>
         </li>
@@ -233,44 +226,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ==========================================================================
-    // 6. HISTORY PAGE TRIVIA ENGINE INTERACTION LOOP
-    // ==========================================================================
-    const quizQuestions = [
-        {
-            question: "Which Syrian city is widely considered one of the oldest continuously inhabited cities in the world?",
-            options: ["Palmyra", "Damascus", "Latakia", "Bosra"],
-            answer: 1 // Damascus is index position 1
-        },
-        {
-            question: "The magnificent ancient desert trading hub ruled by Queen Zenobia was:",
-            options: ["Aleppo", "Mari", "Palmyra", "Ebla"],
-            answer: 2 // Palmyra is index position 2
-        }
-    ];
+// 6. HISTORY PAGE TRIVIA ENGINE INTERACTION LOOP (ISOLATED WITH PERCENTAGE)
+// ==========================================================================
+const quizQuestions = [
+    {
+        question: "Which Syrian city is widely considered one of the oldest continuously inhabited cities in the world?",
+        options: ["Palmyra", "Damascus", "Latakia", "Bosra"],
+        answer: 1
+    },
+    {
+        question: "The magnificent ancient desert trading hub ruled by Queen Zenobia was:",
+        options: ["Aleppo", "Mari", "Palmyra", "Ebla"],
+        answer: 2
+    },
+    {
+        question: "Which language was standardized as a regional trading medium across inland Syria during the Iron Age?",
+        options: ["Greek", "Latin", "Aramaic", "Arabic"],
+        answer: 2
+    },
+    {
+        question: "Following Alexander the Great's conquest, which massive empire made Antioch its capital and transformed Syria into a Hellenistic epicenter?",
+        options: ["The Seleucid Empire", "The Byzantine Empire", "The Ottoman Empire", "The Roman Empire"],
+        answer: 0
+    },
+    {
+        question: "Sultan Saladin unified regional factions during the Crusader wars from his base in which historical Syrian city?",
+        options: ["Mari", "Ebla", "Latakia", "Damascus"],
+        answer: 3
+    }
+];
 
-    let currentQuestionIndex = 0;
+let currentQuestionIndex = 0;
+let correctAnswersCount = 0; // Tracks total correct answers
 
+document.addEventListener('DOMContentLoaded', function () {
+    const quizForm = document.getElementById('quiz-form');
     const questionElement = document.getElementById('quiz-question');
     const optionsContainer = document.getElementById('quiz-options');
-    const quizForm = document.getElementById('quiz-form');
     const feedbackContainer = document.getElementById('quiz-feedback');
     const feedbackAlert = document.getElementById('feedback-alert');
     const nextBtn = document.getElementById('next-question-btn');
 
+    // CRITICAL GUARD: Only execute quiz logic if the form markup actually exists on this page
+    if (!quizForm || !questionElement || !optionsContainer) {
+        return; 
+    }
+
     // Render current active trivia question frame 
     function loadQuizQuestion() {
-        if (!questionElement) return; // Breaks safe if viewed on non-history pages
-
-        feedbackContainer.classList.add('d-none');
-        quizForm.querySelector('button[type="submit"]').disabled = false;
+        if (feedbackContainer) feedbackContainer.classList.add('d-none');
+        
+        const submitBtn = quizForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Answer";
+        }
         
         const qData = quizQuestions[currentQuestionIndex];
         questionElement.textContent = `Q${currentQuestionIndex + 1}: ${qData.question}`;
         
-        // Clear previous configurations
+        // Clear previous entries
         optionsContainer.innerHTML = '';
         
-        // Load options fields
+        // Load option nodes
         qData.options.forEach((opt, idx) => {
             const label = document.createElement('label');
             label.className = 'quiz-option-label';
@@ -279,35 +297,80 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (quizForm) {
-        loadQuizQuestion(); // Initial launch trigger 
+    // Initialize first question on load securely
+    loadQuizQuestion(); 
 
-        quizForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            
-            const selectedOpt = quizForm.querySelector('input[name="trivia-opt"]:checked');
-            if (!selectedOpt) return;
+    // Handle form submissions safely
+    quizForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const selectedOpt = quizForm.querySelector('input[name="trivia-opt"]:checked');
+        if (!selectedOpt) return;
 
-            const chosenAnswer = parseInt(selectedOpt.value);
-            const correctAnswer = quizQuestions[currentQuestionIndex].answer;
+        const chosenAnswer = parseInt(selectedOpt.value);
+        const correctAnswer = quizQuestions[currentQuestionIndex].answer;
 
-            quizForm.querySelector('button[type="submit"]').disabled = true;
-            feedbackContainer.classList.remove('d-none');
+        const submitBtn = quizForm.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+        
+        if (feedbackContainer) feedbackContainer.classList.remove('d-none');
 
-            if (chosenAnswer === correctAnswer) {
-                feedbackAlert.className = "alert alert-success m-0";
-                feedbackAlert.innerHTML = "✨ <strong>Correct!</strong> Excellent job parsing history details.";
+        // Check if current answer is right
+        if (chosenAnswer === correctAnswer) {
+            correctAnswersCount++;
+            feedbackAlert.className = "alert alert-success m-0";
+            feedbackAlert.innerHTML = "✨ <strong>Correct!</strong>";
+        } else {
+            feedbackAlert.className = "alert alert-danger m-0";
+            feedbackAlert.innerHTML = `❌ <strong>Incorrect.</strong> The correct answer was: <strong>${quizQuestions[currentQuestionIndex].options[correctAnswer]}</strong>.`;
+        }
+
+        // Alter the next button text if it is the absolute final question
+        if (currentQuestionIndex === quizQuestions.length - 1) {
+            if (nextBtn) nextBtn.innerHTML = "View Final Results &rarr;";
+        } else {
+            if (nextBtn) nextBtn.innerHTML = "Next Question &rarr;";
+        }
+    });
+
+    // Handle changing questions safely or calculating final percentage scores
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+            if (currentQuestionIndex < quizQuestions.length - 1) {
+                // Advance to the next question frame
+                currentQuestionIndex++;
+                loadQuizQuestion();
             } else {
-                feedbackAlert.className = "alert alert-danger m-0";
-                feedbackAlert.innerHTML = `❌ <strong>Incorrect.</strong> The correct answer was: <strong>${quizQuestions[currentQuestionIndex].options[correctAnswer]}</strong>.`;
+                // End of quiz reached: Calculate the total final score percentage
+                const finalPercentage = Math.round((correctAnswersCount / quizQuestions.length) * 100);
+                
+                // Redesign container interface to display clean summary sheet metrics
+                questionElement.innerHTML = `🏁 Quiz Complete!`;
+                optionsContainer.innerHTML = `
+                    <div class="text-center py-3">
+                        <p class="display-4 font-weight-bold mb-2 text-warning">${finalPercentage}%</p>
+                        <p class="lead">You correctly answered <strong>${correctAnswersCount}</strong> out of <strong>${quizQuestions.length}</strong> questions.</p>
+                    </div>
+                `;
+                
+                // Strip the operational controls away and leave a clean reset loop option
+                if (feedbackContainer) feedbackContainer.classList.add('d-none');
+                
+                const submitBtn = quizForm.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "🔄 Retake Quiz";
+                    
+                    // Rewrite submit button function to reset memory array counters cleanly
+                    quizForm.onsubmit = function(event) {
+                        event.preventDefault();
+                        currentQuestionIndex = 0;
+                        correctAnswersCount = 0;
+                        quizForm.onsubmit = null; // Unbind override logic hook
+                        loadQuizQuestion();
+                    };
+                }
             }
         });
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function () {
-                // Loop questions array indexing infinitely
-                currentQuestionIndex = (currentQuestionIndex + 1) % quizQuestions.length;
-                loadQuizQuestion();
-            });
-        }
     }
+});

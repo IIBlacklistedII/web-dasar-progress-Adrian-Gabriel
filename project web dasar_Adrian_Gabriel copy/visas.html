@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Exploring Syria - Visas</title>
+</head>
+
+<body>
+    <!-- Navbar Component Container -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="konten">
+        <!-- Section 1: Visual Hero Showcase -->
+        <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" class="d-block w-100" alt="Damascus Administration Building">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: About Visas & Core Entry Requirements -->
+        <div class="pre-content container my-5 py-3">
+            <h1 class="text-center display-4 fw-bold custom-culture-title">Visas &amp; Immigration</h1>
+            <div class="title-divider mx-auto mb-4"></div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center-md">
+                    <p class="lead text-secondary fst-italic mb-4">
+                        "Navigating your entry requirements is the first essential step toward exploring the deep historical roots of Syria."
+                    </p>
+                    <p class="culture-desc text-muted lh-lg">
+                        All international travelers wishing to visit Syria are required to obtain a valid entry visa prior to arrival. To secure a tourist visa, applicants must submit a completed application form, a passport with at least six months of validity beyond the intended stay, passport-sized photographs, and proof of a booked travel itinerary or a security clearance processed via an authorized local tour operator. Please note that passports must not contain any entry or exit stamps from Israel, as this will result in an immediate denial of entry.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Interactive Logistics Grid (Alternating Double-Columns) -->
+        <div class="container my-5 px-4">
+            <div class="row g-4 align-items-start">
+                
+                <!-- Pillar 1: Application Steps -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseSteps" aria-expanded="false" aria-controls="collapseSteps">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">The Application Process</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseSteps">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <hr class="mt-0">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    Independent tourist visa applications can be requested directly at your nearest Syrian Embassy or Consulate. Alternatively, the most common route is acquiring a <strong>Security Clearance</strong> through an approved Syrian travel agency, which grants you a visa-on-arrival at land borders or the airport. Processing times generally range from two to several weeks depending on your nationality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Fees & Customs -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseFees" aria-expanded="false" aria-controls="collapseFees">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">Visa Fees &amp; Border Customs</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseFees">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <hr class="mt-0">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    Visa issuance fees vary substantially based on the applicant's country of citizenship and are typically paid in cash (USD or Euros) directly at the border checkpoint. Upon clearing passport control, immigration officers will issue an entry stamp specifying your allowed duration of stay. Always double-check current bilateral regulations before attempting a crossing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 4: Interactive Visa Fee Calculator -->
+        <div class="container my-5 px-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0 p-4 bg-light">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold text-dark">Visa Fee Calculator</h2>
+                            <p class="text-muted small">Select your citizenship and desired visa type to estimate your entry fee requirements.</p>
+                            <div class="title-divider mx-auto" style="width: 60px; height: 3px; background-color: #000; margin-top: 10px;"></div>
+                        </div>
+
+                        <div class="row g-3">
+                            <!-- Country Select Dropdown -->
+                            <div class="col-md-6">
+                                <label for="calcCountry" class="form-label fw-semibold text-secondary">Where are you from?</label>
+                                <select id="calcCountry" class="form-select form-select-lg border-2">
+                                    <option value="" selected disabled>Choose your country...</option>
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Belarus">Belarus</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Benin">Benin</option>
+                                    <option value="Bosnia & Herzegovina">Bosnia &amp; Herzegovina</option>
+                                    <option value="Botswana">Botswana</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Bulgaria">Bulgaria</option>
+                                    <option value="Burkina Faso">Burkina Faso</option>
+                                    <option value="Burundi">Burundi</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                    <option value="Central Africa">Central Africa</option>
+                                    <option value="Chad">Chad</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="China">China</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Congo">Congo</option>
+                                    <option value="Cuba">Cuba</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech">Czech</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Djibouti">Djibouti</option>
+                                    <option value="Dominican Republic">Dominican Republic</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option value="Ethiopia">Ethiopia</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="Gabon">Gabon</option>
+                                    <option value="Gambia">Gambia</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Guinea">Guinea</option>
+                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option value="Guyana">Guyana</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Iran">Iran</option>
+                                    <option value="Iraq">Iraq</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Jamaica">Jamaica</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Laos">Laos</option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                    <option value="Lesotho">Lesotho</option>
+                                    <option value="Liberia">Liberia</option>
+                                    <option value="Libya">Libya</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Malawi">Malawi</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Mali">Mali</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Mauritania">Mauritania</option>
+                                    <option value="Mauritius">Mauritius</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Moldova">Moldova</option>
+                                    <option value="Mongolia">Mongolia</option>
+                                    <option value="Montenegro">Montenegro</option>
+                                    <option value="Morocco">Morocco</option>
+                                    <option value="Mozambique">Mozambique</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Namibia">Namibia</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="North Korea">North Korea</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Oman">Oman</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Romania">Romania</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="Sao Tome & Principe">Sao Tome &amp; Principe</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="Senegal">Senegal</option>
+                                    <option value="Serbia">Serbia</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                    <option value="Sierra Leone">Sierra Leone</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Slovakia">Slovakia</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Somalia">Somalia</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="South Korea">South Korea</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sudan">Sudan</option>
+                                    <option value="Suriname">Suriname</option>
+                                    <option value="Swaziland">Swaziland</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Timor-Leste">Timor-Leste</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Turkmenistan">Turkmenistan</option>
+                                    <option value="Tuvalu">Tuvalu</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="UK">UK</option>
+                                    <option value="United States of America">United States of America</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Others">Others (not listed)</option>
+                                </select>
+                            </div>
+
+                            <!-- Visa Type Select Dropdown -->
+                            <div class="col-md-6">
+                                <label for="calcType" class="form-label fw-semibold text-secondary">Visa Configuration</label>
+                                <select id="calcType" class="form-select form-select-lg border-2">
+                                    <option value="" selected disabled>Choose type...</option>
+                                    <option value="single">Single Entry (1 Month)</option>
+                                    <option value="double">Double Entry (3 Months)</option>
+                                    <option value="multiple">Multiple Entry (6 Months)</option>
+                                    <option value="transit">Transit Visa (15 Days)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Price Results Window Box -->
+                        <div class="mt-4 p-4 text-center rounded bg-white border border-secondary-subtle">
+                            <span class="d-block text-uppercase tracking-wider text-muted small fw-bold mb-1">Estimated Cost</span>
+                            <div id="calcDisplay" class="display-5 fw-bold text-dark">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Embedded Client-Side Calculator Logic Script Block -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Dataset cleanly indexed by country naming rules extracted directly from database source
+                const visaData = {
+                    "Afghanistan": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Albania": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Algeria": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Angola": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Argentina": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Armenia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Australia": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Austria": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Azerbaijan": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Bahamas": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Bahrain": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Bangladesh": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Belarus": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Belgium": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Benin": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Bosnia & Herzegovina": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Botswana": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Brazil": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Bulgaria": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Burkina Faso": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Burundi": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Cambodia": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Cameroon": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Canada": { single: "$100", double: "$150", multiple: "$200", transit: "$50" },
+                    "Cape Verde": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Central Africa": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Chad": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Chile": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "China": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Colombia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Congo": { single: "$300", double: "$350", multiple: "$400", transit: "$150" },
+                    "Cuba": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Cyprus": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Czech": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Denmark": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Djibouti": { single: "$100", double: "$150", multiple: "$200", transit: "$50" },
+                    "Dominican Republic": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Ecuador": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Egypt": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Equatorial Guinea": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Ethiopia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Fiji": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Finland": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "France": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Gabon": { single: "$200", double: "$300", multiple: "$400", transit: "$100" },
+                    "Gambia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Georgia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Germany": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Ghana": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Greece": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Grenada": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Guinea": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Guinea-Bissau": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Guyana": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Hungary": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Iceland": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "India": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Indonesia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Iran": { single: "$400", double: "$500", multiple: "$800", transit: "$250" },
+                    "Iraq": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Italy": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Jamaica": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Japan": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Jordan": { single: "Free", double: "Free", multiple: "Free", transit: "Free" },
+                    "Kazakhstan": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Kenya": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Kyrgyzstan": { single: "$200", double: "$300", multiple: "$400", transit: "$100" },
+                    "Laos": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Latvia": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Lebanon": { single: "$60", double: "$60", multiple: "$60", transit: "$60" },
+                    "Lesotho": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Liberia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Libya": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Lithuania": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Luxembourg": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Malaysia": { single: "Free", double: "Free", multiple: "Free", transit: "Free" },
+                    "Malawi": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Mali": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Malta": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Marshall Islands": { single: "$300", double: "$350", multiple: "$400", transit: "$150" },
+                    "Mauritania": { single: "Free", double: "Free", multiple: "Free", transit: "Free" },
+                    "Mauritius": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Mexico": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Moldova": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Mongolia": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Montenegro": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Morocco": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Mozambique": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Myanmar": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Namibia": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Nepal": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Netherlands": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "New Zealand": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Niger": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Nigeria": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "North Korea": { single: "$300", double: "$350", multiple: "$400", transit: "$150" },
+                    "Norway": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Oman": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Pakistan": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Paraguay": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Peru": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Philippines": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Poland": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Portugal": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Qatar": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Romania": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Russia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Rwanda": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Sao Tome & Principe": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Saudi Arabia": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Senegal": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Serbia": { single: "Free", double: "Free", multiple: "Free", transit: "Free" },
+                    "Seychelles": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Sierra Leone": { single: "$100", double: "$150", multiple: "$200", transit: "$50" },
+                    "Singapore": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Slovakia": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Slovenia": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Somalia": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "South Africa": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "South Korea": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Spain": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Sudan": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "Suriname": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Swaziland": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Sweden": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Switzerland": { single: "$75", double: "$110", multiple: "$150", transit: "$40" },
+                    "Thailand": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Timor-Leste": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Turkey": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Turkmenistan": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Tuvalu": { single: "$25", double: "$40", multiple: "$50", transit: "$15" },
+                    "UAE": { single: "$100", double: "$150", multiple: "$200", transit: "$50" },
+                    "Uganda": { single: "$100", double: "$150", multiple: "$200", transit: "$50" },
+                    "UK": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "United States of America": { single: "$200", double: "$300", multiple: "$400", transit: "$100" },
+                    "Uruguay": { single: "$50", double: "$75", multiple: "$100", transit: "$25" },
+                    "Uzbekistan": { single: "$150", double: "$225", multiple: "$300", transit: "$75" },
+                    "Others": { single: "$50", double: "$75", multiple: "$100", transit: "$25" }
+                };
+
+                const countryDropdown = document.getElementById("calcCountry");
+                const typeDropdown = document.getElementById("calcType");
+                const displayWindow = document.getElementById("calcDisplay");
+
+                function calculateFee() {
+                    const country = countryDropdown.value;
+                    const type = typeDropdown.value;
+
+                    // Execute evaluation logic if both fields are valid selection rules
+                    if (country && type) {
+                        const calculatedValue = visaData[country][type];
+                        displayWindow.textContent = calculatedValue;
+                        
+                        if (calculatedValue === "Free") {
+                            displayWindow.className = "display-5 fw-bold text-success";
+                        } else {
+                            displayWindow.className = "display-5 fw-bold text-dark";
+                        }
+                    }
+                }
+
+                countryDropdown.addEventListener("change", calculateFee);
+                typeDropdown.addEventListener("change", calculateFee);
+            });
+        </script>
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

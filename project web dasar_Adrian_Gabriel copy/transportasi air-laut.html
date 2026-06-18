@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <title>Air & Sea Transport - Syria</title>
+    <style>
+        
+        .nav-links .dropdown {
+            position: static;
+        }
+
+        
+        .hero-split-container {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-bg-split {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 1;
+        }
+
+        .hero-left {
+            width: 50%;
+            height: 100%;
+            background: url('damascus airport.jpg') center/cover no-repeat;
+        }
+
+        .hero-right {
+            width: 50%;
+            height: 100%;
+            background: url('latakia port.jpg') center/cover no-repeat;
+        }
+
+        
+        .hero-overlay-split {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        
+        .hero-split-container nav, 
+        .hero-split-container .hero-text {
+            position: relative;
+            z-index: 3;
+        }
+
+        
+        .konten-transport {
+            padding: 60px 0;
+            color: #333;
+            font-family: sans-serif;
+        }
+
+        .konten-transport h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+            border-bottom: 3px solid #fc0;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        
+        .transport-hub-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+            overflow: hidden;
+            border-top: 4px solid #222;
+            transition: transform 0.2s;
+        }
+
+        .transport-hub-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .hub-air { border-top-color: #0d6efd; }
+        .hub-sea { border-top-color: #20c997; }
+
+        .hub-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hub-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    <main class="container konten-transport">
+        <!-- Section 1: Hero Banner -->
+        <section class="text-white text-center py-5 mb-5 position-relative heavy-cultural-bg">
+            <img src="https://s.france24.com/media/display/1e3b9354-ca8f-11ef-9b88-005056bf30b7/w:1280/p:16x9/adc0ebbc8284a2f6ebd6bad09654b52bb44abf0b.jpg" alt="" class="img-fluid w-100 position-absolute top-0 start-0 h-100 object-fit-cover">
+            <div class="container py-4 position-relative z-1">
+                <span class="text-uppercase tracking-wider text-warning small fw-bold">
+                    GETTING AROUND
+                </span>
+                <h1 class="display-4 fw-bold mt-2">Airports & Seaports of Syria</h1>
+                <p class="lead mx-auto col-md-8 text-light-50">
+                    International Gateways to the Syrian Arab Republic
+                </p>
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50 "></div>
+        </section>
+
+        <div class="text-center mb-5">
+            <h1></h1>
+            <p></p>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2>Gerbang Masuk Internasional</h2>
+                <p class="mx-auto" style="max-width: 800px;">
+                    Sebagai negara yang terletak di titik strategis Timur Tengah, Suriah terhubung dengan dunia luar melalui infrastruktur udara dan laut yang mumpuni. Berikut adalah rincian gerbang utama pertukaran internasional dan pariwisata di Suriah.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-4">
+                    <span class="fs-3 me-2"></span>
+                    <h3 class="fw-bold m-0" style="font-size: 22px; color: #222;">Bandara Internasional (Airports)</h3>
+                </div>
+
+                
+                <div class="transport-hub-card hub-air">
+                    <img src="https://www.aljazeera.com/wp-content/uploads/2022/06/000_32CB2M8-1.jpg?resize=1920%2C1440" alt="Damascus International Airport" class="hub-image">
+                    <div class="hub-body">
+                        <span class="badge bg-primary mb-2">Utama / Ibu Kota</span>
+                        <h4 class="fw-bold fs-5 mb-1">Damascus International Airport (DAM)</h4>
+                        <p class="text-muted small mb-2">📍 Lokasi: Damaskus (Bagian Selatan Suriah)</p>
+                        <p class="m-0 small text-secondary">Merupakan bandara tersibuk dan gerbang utama masuknya wisatawan internasional ke Suriah. Terhubung langsung dengan pusat kota melalui layanan taksi dan bus bandara.</p>
+                    </div>
+                </div>
+
+                
+                <div class="transport-hub-card hub-air">
+                    <img src="https://static-cdn.toi-media.com/www/uploads/2023/08/338P473-highres.jpg" alt="Aleppo International Airport" class="hub-image">
+                    <div class="hub-body">
+                        <span class="badge bg-secondary mb-2">Kota Kedua</span>
+                        <h4 class="fw-bold fs-5 mb-1">Aleppo International Airport (ALP)</h4>
+                        <p class="text-muted small mb-2">📍 Lokasi: Aleppo (Bagian Utara Suriah)</p>
+                        <p class="m-0 small text-secondary">Melayani wilayah utara Suriah. Bandara ini menjadi hub penting untuk mempermudah akses langsung turis yang ingin menjelajahi wisata sejarah kota kuno Aleppo.</p>
+                    </div>
+                </div>
+
+                
+                <div class="transport-hub-card hub-air">
+                    <img src="https://media.invisioncic.com/c334187/monthly_2024_10/lat7.jpg.d20c52141ddbf6eda4d62dd523d2d3a3.jpg" alt="Bassel Al-Assad International Airport" class="hub-image">
+                    <div class="hub-body">
+                        <span class="badge bg-secondary mb-2">Kawasan Pesisir</span>
+                        <h4 class="fw-bold fs-5 mb-1">Bassel Al-Assad International Airport (LTK)</h4>
+                        <p class="text-muted small mb-2">📍 Lokasi: Latakia (Pantai Barat Suriah)</p>
+                        <p class="m-0 small text-secondary">Bandara utama yang melayani kota pelabuhan Latakia. Sangat strategis bagi wisatawan yang mengincar destinasi wisata pantai dan resor laut di Suriah.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-4">
+                    <span class="fs-3 me-2"></span>
+                    <h3 class="fw-bold m-0" style="font-size: 22px; color: #222;">Pelabuhan Utama (Seaports)</h3>
+                </div>
+
+                
+                <div class="transport-hub-card hub-sea">
+                    <img src="https://www.reuters.com/resizer/v2/FWP4D63N6JPI5G4XSI6UHSA6CA.jpg?auth=0825b1fd77763cb199b451000cb3f8a67beeec25605291f4b17181df4fdacac7&width=1920&quality=80" alt="Port of Lattakia" class="hub-image">
+                    <div class="hub-body">
+                        <span class="badge bg-success mb-2">Pelabuhan Terbesar</span>
+                        <h4 class="fw-bold fs-5 mb-1">Port of Lattakia (Pelabuhan Latakia)</h4>
+                        <p class="text-muted small mb-2">📍 Lokasi: Latakia (Pesisir Barat)</p>
+                        <p class="m-0 small text-secondary">Pelabuhan laut utama di Suriah dengan infrastruktur paling modern. Selain menjadi pusat kargo, pelabuhan ini memiliki terminal penumpang yang menghubungkan Suriah dengan kawasan regional Mediterania.</p>
+                    </div>
+                </div>
+
+                
+                <div class="transport-hub-card hub-sea">
+                    <img src="1737549602_5099869_1737549564_1346345Syria_Terminates_A_68KKCoP.jpg" alt="Port of Tartus" class="hub-image">
+                    <div class="hub-body">
+                        <span class="badge bg-secondary mb-2">Komersial & Sejarah</span>
+                        <h4 class="fw-bold fs-5 mb-1">Port of Tartus (Pelabuhan Tartus)</h4>
+                        <p class="text-muted small mb-2">📍 Lokasi: Tartus (Pesisir Barat bagian Selatan)</p>
+                        <p class="m-0 small text-secondary">Pelabuhan terbesar kedua di Suriah yang kaya akan nilai sejarah sejak zaman Fenisia. Berfungsi aktif mendukung mobilitas logistik serta menjadi akses penyeberangan menuju Pulau Arwad.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>    
+   
+    <div id="footer-placeholder"></div>
+</body>
+</html>

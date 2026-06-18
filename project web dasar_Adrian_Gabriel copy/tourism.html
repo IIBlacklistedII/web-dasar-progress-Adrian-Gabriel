@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Exploring Syria - Tourism</title>
+</head>
+
+<body>
+    <!-- Navbar Component Container -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- MAIN CONTENT MODULE START -->
+    <main class="konten">
+        <!-- Section 1: Immersive Tourism Landscape Carousel -->
+        <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Bosra_pano_Syria.jpg" class="d-block w-100" alt="Ancient Ruins of Bosra">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Gate_of_the_Great_Mosque%2C_Damascus.jpg" class="d-block w-100" alt="The Great Mosque of Damascus Entrance">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" class="d-block w-100" alt="Azem Palace Courtyard">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Informative Intro Block Header -->
+        <div class="pre-content container my-5 py-3">
+            <h1 class="text-center display-4 fw-bold custom-culture-title">Travel & Tourism</h1>
+            <div class="title-divider mx-auto mb-4"></div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center-md">
+                    <p class="lead text-secondary fst-italic mb-4">
+                        "To travel through Syria is to walk alongside history itself, exploring ancient bazaars, magnificent fortresses, and timeless landscapes."
+                    </p>
+                    <p class="culture-desc text-muted lh-lg">
+                        Syria offers an unparalleled journey for intrepid travelers seeking to connect with the deep roots of human civilization. As home to some of the world's oldest continuously inhabited settlements, the country presents a breathtaking mix of architectural marvels, vibrant traditional markets, and scenic cross-country pathways. Whether you are looking to admire ancient roman structures or discover peaceful mountain villages, your travel planning begins here.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Interactive Travel Guide Accordion Grid -->
+        <div class="container my-5 px-4">
+            <!-- Row 1: Historical Excursions & Travel Basics -->
+            <div class="row g-4 align-items-start">
+                
+                <!-- Card 1: Guided Historical Tours -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseTours" aria-expanded="false" aria-controls="collapseTours">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">Historical Guided Excursions</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseTours">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Bosra_pano_Syria.jpg" class="img-fluid rounded culture-card-img mb-3 shadow-xs" alt="Guided archeological tour at an amphitheater">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    Unlock thousands of years of antiquity with custom-tailored historical itineraries. Highly knowledgeable local guides bring iconic landmarks to life—leading groups seamlessly through the legendary desert ruins of Palmyra, the towering stone defenses of the Aleppo Citadel, and the remarkably preserved crusader walls of Crac des Chevaliers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Essential Travel Basics -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseBasics" aria-expanded="false" aria-controls="collapseBasics">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">Visas &amp; Entry Logistics</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseBasics">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" class="img-fluid rounded culture-card-img mb-3 shadow-xs" alt="Visitor center context display">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    Planning an international arrival requires navigating key security procedures. Most global visitors must secure a travel visa and settle standard governmental processing fees well in advance. Check ahead for official updates regarding operational commercial airport checkpoints and required border crossing clearance documentation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5.3.8 & Icons matching culture.html layout standards -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Exploring Syria - Diverse Geography</title>
+</head>
+
+<body>
+    <!-- Navbar Component Container -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content Engine -->
+    <main class="konten">
+        <!-- Landscape Image Slider Component Wrapper -->
+        <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Bosra_pano_Syria.jpg" class="d-block w-100" alt="Syrian Plains landscape">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Gate_of_the_Great_Mosque%2C_Damascus.jpg" class="d-block w-100" alt="Mountain Pass near Damascus">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: Intro Frame Header -->
+        <div class="pre-content container my-5 py-3">
+            <h1 class="text-center display-4 fw-bold custom-culture-title">Geographical Wonders</h1>
+            <div class="title-divider mx-auto mb-4"></div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center-md">
+                    <p class="lead text-secondary fst-italic mb-4">
+                        "From the sun-drenched sands of the Syrian Desert to the lush banks of the Orontes, the land tells a story of diverse terrain that nurtured human history."
+                    </p>
+                    <p class="culture-desc text-muted lh-lg">
+                        Syria's geography is an extraordinary study in contrasts, offering fertile coastal plains, arid badlands, and soaring mountain ranges. Bordering the Mediterranean Sea to the west, it features an ecological footprint that has historically served as a strategic overland bridge between empires. Its unique topographies continue to shape regional agriculture, trade corridors, and modern urban settlement patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Interactive Accordion Regional Cards -->
+        <div class="container my-5 px-4">
+            <div class="row g-4 align-items-start">
+                
+                <!-- Region 1: The Mediterranean Coast & Plains -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseCoastal" aria-expanded="false" aria-controls="collapseCoastal">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">The Coastal Rim &amp; Plains</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseCoastal">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" class="img-fluid rounded culture-card-img mb-3 shadow-xs" alt="Fertile Plains View">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    The narrow coastal strip running along the Mediterranean is Syria's green lung. This micro-region features rich, fertile soil, intense orchard cultivation, and citrus groves, backed closely by the protective Syrian Coastal Mountain Ranges that capture vital rainfall.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Region 2: The Euphrates Basin & Valley -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseRiver" aria-expanded="false" aria-controls="collapseRiver">
+                        <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
+                            <span class="fs-4 fw-semibold text-dark m-0">The Euphrates Basin</span>
+                            <span class="toggle-arrow">▼</span>
+                        </div>
+                        
+                        <div class="collapse" id="collapseRiver">
+                            <div class="card-body pt-0 px-4 pb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Bosra_pano_Syria.jpg" class="img-fluid rounded culture-card-img mb-3 shadow-xs" alt="River Valley Environment">
+                                <p class="text-muted mb-0 small-text-justified">
+                                    Flowing diagonally through the country, the vital Euphrates River basin serves as Syria's primary source of fresh water and hydroelectric power. It transforms the surrounding desert landscape into rich, arable farmland, sustaining cities for millennia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+   
+    <!-- Footer Component Container -->
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
