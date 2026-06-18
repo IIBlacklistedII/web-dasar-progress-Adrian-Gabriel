@@ -993,3 +993,87 @@ body {
         padding: 20px;
         border-radius: 0 8px 8px 0;
     }
+
+/* ==========================================================================
+    13. Responsive Overrides & Fixes
+========================================================================== */
+
+/* Fix: Make the "Exploring Syria" Title Responsive */
+#card-title {
+    font-size: 3.5rem; /* Reduced from 5rem for better baseline scaling */
+}
+
+@media (max-width: 768px) {
+    #card-title {
+        font-size: 2.2rem;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* Fix: Enhance Section 3 Hero Text Responsiveness for Medium/Small screens */
+@media (max-width: 1024px) {
+    .hero-sentence-wrapper {
+        flex-direction: column;
+        align-items: center;
+        white-space: normal;
+        gap: 0px;
+    }
+    .hero-static-lead {
+        font-size: 4rem; /* Smoother scaling for tablets */
+    }
+    .carousel-vertical {
+        height: 5.5rem;
+        width: 100%;
+    }
+    .carousel-vertical .carousel-item h3 {
+        font-size: 4rem;
+        line-height: 5.5rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-static-lead {
+        font-size: 2.5rem;
+    }
+    .carousel-vertical {
+        height: 3.8rem;
+    }
+    .carousel-vertical .carousel-item h3 {
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+    }
+    .hero-tagline {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+/* Fix: Section 7 Content Cards Scaling Framework */
+.bg-card {
+    height: auto; /* Allow auto stretching on collapse fallback */
+    min-height: 520px; /* Secure ideal vertical framing height */
+}
+
+.card-details p {
+    font-size: 0.9rem; /* Slightly smaller for structural text wrapping balance */
+}
+
+/* Fix: Open up container ceiling so long paragraphs + custom buttons can render fully */
+.bg-card:hover .card-details {
+    max-height: 320px; /* Raised from 200px to avoid button clipping */
+}
+
+/* Responsive adjustment for bootstrap stacked columns */
+@media (max-width: 768px) {
+    .bg-card {
+        min-height: 450px;
+    }
+    /* Optional: Reveal elements by default on touch screens since there is no 'hover' state */
+    .card-details {
+        max-height: 300px;
+        opacity: 1;
+    }
+}

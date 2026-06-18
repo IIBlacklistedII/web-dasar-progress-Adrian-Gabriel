@@ -19,12 +19,12 @@ const sharedNavbarLayout = `
                 </div>
                 <div class="menu-column">
                     <h3>Getting around</h3>
-                    <a href="transportasi darat.html">Ground Transport</a>
-                    <a href="transportasi air-laut.html">Air & Water Transport</a>
+                    <a href="transportasi-darat.html">Ground Transport</a>
+                    <a href="transportasi-air-laut.html">Air & Water Transport</a>
                 </div>
                 <div class="menu-column">
                     <h3>Basics</h3>
-                    <a href="#">Entrance Fees</a>
+                    <a href="entrance-fee.html">Entrance Fees</a>
                     <a href="visas.html">Visas</a>
                 </div>
             </div>
@@ -35,21 +35,21 @@ const sharedNavbarLayout = `
             <div class="custom-dropdown-menu">
                 <div class="menu-column">
                     <h3>Historical Sites</h3>
-                    <a href="#">Palmyra</a>
-                    <a href="#">Aleppo Citadel</a>
-                    <a href="#">Crac des Chevaliers</a>
+                    <a href="https://whc.unesco.org/en/list/23/">Palmyra</a>
+                    <a href="https://whc.unesco.org/en/list/21">Aleppo Citadel</a>
+                    <a href="https://whc.unesco.org/en/list/1229">Crac des Chevaliers</a>
                 </div>
                 <div class="menu-column">
                     <h3>Natural Wonders</h3>
-                    <a href="#">Dead Sea</a>
-                    <a href="#">Orontes River</a>
-                    <a href="#">Al-Ghab Plain</a>
+                    <a href="https://en.wikipedia.org/wiki/Ghab_Plain">Jabal an-Nusayriyah</a>
+                    <a href="https://en.wikipedia.org/wiki/Orontes_River">Orontes River</a>
+                    <a href="https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range">Al-Ghab Plain</a>
                 </div>
                 <div class="menu-column">
                     <h3>Cultural Experiences</h3>
-                    <a href="#">Damascus Old City</a>
-                    <a href="#">Hama Water Wheels</a>
-                    <a href="#">Bosra Theater</a>
+                    <a href="https://whc.unesco.org/en/list/20/">Damascus Old City</a>
+                    <a href="https://en.wikipedia.org/wiki/Norias_of_Hama">Hama Water Wheels</a>
+                    <a href="https://whc.unesco.org/en/list/22/">Bosra Old City</a>
                 </div>
             </div>
         </li>
