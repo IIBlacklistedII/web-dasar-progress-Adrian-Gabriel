@@ -7,7 +7,7 @@ const sharedNavbarLayout = `
     </div>
 
     <ul class="nav-links">
-        <li><a href="suriah.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li class="custom-dropdown-container">
             <a href="#" class="custom-dropbtn">General Information</a>
 
