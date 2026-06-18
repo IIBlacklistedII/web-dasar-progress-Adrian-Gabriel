@@ -10,7 +10,7 @@
     position: relative;
     font-family: sans-serif;
     z-index: 10000; 
-    transition: background-color 0.3s ease; /* Smooth transition fallback */
+    transition: background-color 0.3s ease;
 }
 
 .navbar.navbar-dark-solid {
@@ -45,7 +45,6 @@
     padding: 0;
 }
 
-/* CRITICAL: Acts as the structural viewport boundary anchor */
 .custom-dropdown-container {
     position: static; 
 }
@@ -60,11 +59,9 @@
     font-size: 16px;
 }
 
-/* Absolute isolated menu wrapper rules */
 .custom-dropdown-menu {
     display: none; 
     position: absolute;
-    /* Forces the menu to lock directly below the navbar boundary line */
     top: 100%; 
     left: 0;
     right: 0;
@@ -72,7 +69,6 @@
     background-color: white;
     padding: 30px 80px;
     box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
-    /* CRITICAL: Guarantees it floats over images, buttons, and text blocks completely independent */
     z-index: 10005 !important;         
     gap: 60px;
     justify-content: center;
@@ -137,7 +133,6 @@
     width: 50px;
 }
 
-/* Base style for footer anchors */
 .bagian-footer a {
     color: #ffffff !important;
     text-decoration: none;
@@ -147,7 +142,6 @@
     display: inline-block;
 }
 
-/* Hover transition to Golden Yellow */
 .bagian-footer a:hover {
     color: #fc0 !important;
 }
@@ -156,12 +150,10 @@
    Exploring Syria Landing Page (suriah.html) Styles
 ========================================================================== */
 
-/* Page Title Heading */
 #card-title{
     font-size: 5rem;
 }
 
-/* Base Component Settings for Content Cards */
 .bg-card {
     position: relative;
     height: 550px;
@@ -176,7 +168,6 @@
     z-index: 1;
 }
 
-/* Universal Dark Baseline Overlay Gradient */
 .bg-card::before {
     content: '';
     position: absolute;
@@ -186,7 +177,6 @@
     transition: opacity 0.35s ease;
 }
 
-/* Independent Dynamic Hover Overlay (Captures custom HTML --overlay-color) */
 .bg-card::after {
     content: '';
     position: absolute;
@@ -197,13 +187,10 @@
     transition: opacity 0.4s ease;
 }
 
-
-/* Activates color shift when card is hovered */
 .bg-card:hover::after {
     opacity: 1;
 }
 
-/* Card Heading Header Block */
 .card-content {
     position: relative;
     z-index: 4;
@@ -216,7 +203,6 @@
     letter-spacing: 1px;
 }
 
-/* Collapsed Hidden Detailed View Frame */
 .card-details {
     position: relative;
     z-index: 4;
@@ -244,8 +230,6 @@
 }
 
 
-/* --- Responsive Breakpoints & Adaptability Fixes --- */
-
 @media (max-width: 768px) {
     /* Downscale large page heading */
     #card-title {
@@ -254,12 +238,10 @@
         margin-bottom: 2rem !important;
     }
 
-    /* Shrink baseline height parameters for tablet/mobile columns */
     .bg-card {
         min-height: 450px;
     }
     
-    /* Auto-reveal detail components on touch-screen viewports (fallback mechanism) */
     .card-details {
         max-height: 300px;
         opacity: 1;
@@ -292,7 +274,6 @@
     z-index: 5;
 }
 
-/* Side-by-side Layout Framework */
 .hero-sentence-wrapper {
     display: inline-flex;
     align-items: center; 
@@ -316,11 +297,10 @@
     opacity: 0.9;
 }
 
-/* Vertical Carousel Window Configuration */
 .carousel-vertical {
     display: inline-block;
-    height: 8.5rem; /* Expanded frame size prevents tall fonts from clipping */
-    width: 500px; /* Ensure full */
+    height: 8.5rem;
+    width: 500px;
     flex-grow: 1;
     overflow: hidden;
 }
@@ -329,13 +309,11 @@
     height: 100%;
 }
 
-/* CRITICAL FIX: Let Bootstrap handle native block transitions without flex interference */
 .carousel-vertical .carousel-item {
     transition: transform 0.6s ease-in-out;
     height: 100%;
 }
 
-/* Vertical Transition Engine Overrides */
 .carousel-vertical .carousel-item-next:not(.carousel-item-start),
 .carousel-vertical .active.carousel-item-end {
     transform: translate3d(0, 100%, 0);
@@ -346,17 +324,15 @@
     transform: translate3d(0, -100%, 0);
 }
 
-/* CRITICAL FIX: Apply centering to the inner text block to keep transitions clean */
 .carousel-vertical .carousel-item h3 {
     font-size: 6.5rem;
     font-weight: 800;
     color: #fc0; 
     margin: 0;
-    line-height: 8.5rem; /* Matches container height to center perfectly without overlapping */
+    line-height: 8.5rem;
     text-align: left;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .hero-sentence-wrapper {
         flex-direction: column;
@@ -392,7 +368,7 @@
    ========================================================================== */
 .org-chart-container {
     width: 100%;
-    overflow-x: auto; /* Adds a scrollbar on mobile so the layout doesn't crush */
+    overflow-x: auto;
     padding: 20px 10px;
     background: #fafafa;
     border-radius: 12px;
@@ -403,11 +379,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 600px; /* Ensures structural spacing remains intact */
+    min-width: 600px;
     margin: 0 auto;
 }
 
-/* Individual Content Blocks */
 .org-node {
     background: #fff;
     border: 2px solid #e0e0e0;
@@ -434,7 +409,6 @@
     line-height: 1.4;
 }
 
-/* Specific Node Themes */
 .node-root {
     border-color: #222;
     background: #222;
@@ -445,14 +419,13 @@
 }
 
 .node-president {
-    border-top: 4px solid #fc0; /* Accents the left node branch */
+    border-top: 4px solid #fc0;
 }
 
 .node-pm {
-    border-top: 4px solid #fc0; /* Accents the right node branch */
+    border-top: 4px solid #fc0;
 }
 
-/* Label Tags */
 .node-badge {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -471,7 +444,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Structural Branch Lines Framework */
 .org-connector-vertical {
     width: 2px;
     height: 30px;
@@ -485,7 +457,6 @@
     position: relative;
 }
 
-/* Generate horizontal connecting bar across child nodes */
 .org-branches::before {
     content: '';
     position: absolute;
@@ -505,7 +476,6 @@
     justify-content: center;
 }
 
-/* Generate individual short top lines into child cards */
 .org-branch::before {
     content: '';
     position: absolute;
@@ -518,17 +488,15 @@
 }
 
 .org-node {
-    /* WIDENED: Increased from 280px to 320px for a more substantial idle card */
     width: 320px;
     
-    /* HEIGHTENED: Increased from 150px to 165px to completely clear the avatar + text */
     height: fit-content; 
     
-    padding: 20px 18px; /* Extra interior padding comfort */
+    padding: 20px 18px;
     overflow: hidden;
     background: #fff;
     border: 2px solid #e0e0e0;
-    border-radius: 14px; /* Slightly smoother rounded corners for the larger size */
+    border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     position: relative;
     z-index: 2;
@@ -540,7 +508,6 @@
     will-change: width, height, transform;
 }
 
-/* Force Side-by-Side Left Alignment */
 .node-profile-header {
     display: flex !important;
     flex-direction: row !important;
@@ -552,7 +519,6 @@
 }
 
 .node-avatar-frame {
-    /* SCALED UP: Increased from 75px to 85px to make the portrait placeholder larger */
     width: 85px; 
     height: 85px;
     border-radius: 12px;
@@ -564,15 +530,12 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Target the actual image element inside the avatar frame container */
 .node-avatar-frame img {
     width: 100%;
     height: 100%;
     
-    /* CRITICAL FIX: Cuts and crops the image cleanly into a perfect square without distortion */
     object-fit: cover; 
     
-    /* Centers the crop focal point so the president's face stays perfectly in frame */
     object-position: center top; 
 }
 
@@ -585,7 +548,7 @@
 }
 
 .node-profile-meta h3 {
-    font-size: 1.3rem; /* Slightly larger heading font size */
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
@@ -606,7 +569,6 @@
     margin-bottom: 3px !important;
 }
 
-/* Hidden container state */
 .node-detailed-info {
     opacity: 0;
     visibility: hidden;
@@ -618,13 +580,11 @@
    THE CORNER TRANSFORMATION (Widen + Heighten + Pop)
    ========================================================================== */
 .org-node:hover {
-    /* WIDENED: Increased from 520px to 580px so list text lines span beautifully */
     width: 580px !important;   
     
-    /* DYNAMIC CEILING: Kept at auto so it perfectly contains all long bullet points */
     height: auto !important;  
     
-    padding: 25px 30px !important; /* Richer, larger padding spaces when open */
+    padding: 25px 30px !important;
     border-color: #fc0;
     transform: scale(1.02); 
     box-shadow: 0 15px 35px rgba(255, 204, 0, 0.2);
@@ -639,14 +599,12 @@
     transition-delay: 0.08s; 
 }
 
-/* Upscale avatar even further to match the majestic hovered card presence */
 .org-node:hover .node-avatar-frame {
     width: 100px;
     height: 100px;
     border-color: #fc0;
 }
 
-/* Dim unhovered element nodes */
 .org-branches:hover .org-node {
     opacity: 0.35;
     transform: scale(0.95);

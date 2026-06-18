@@ -17,7 +17,6 @@
     <div id="navbar-placeholder"></div>
 
     <main class="konten konten-padded">
-        <!-- Section Header -->
         <div class="gov-header-block mb-4">
             <h2 class="custom-government-title">Current Government of Syria</h2>
         </div>
@@ -125,30 +124,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-    <script>
-        // Ensure only one dropdown is open at a time; close on outside click or Escape.
-        function closeAllDropdowns() {
-            document.querySelectorAll('.dropdown-content.show-menu').forEach(menu => menu.classList.remove('show-menu'));
-        }
-
-        document.querySelectorAll('.dropbtn').forEach(function(btn) {
-            btn.addEventListener('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                const li = btn.closest('li') || btn.closest('.dropdown') || btn.parentElement;
-                const menu = li ? li.querySelector('.dropdown-content') : null;
-                if (!menu) return;
-                const isOpen = menu.classList.contains('show-menu');
-                closeAllDropdowns();
-                if (!isOpen) menu.classList.add('show-menu');
-            });
-        });
-
-        document.addEventListener('click', closeAllDropdowns);
-        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDropdowns(); });
-    </script>
 </body>
 </html>
