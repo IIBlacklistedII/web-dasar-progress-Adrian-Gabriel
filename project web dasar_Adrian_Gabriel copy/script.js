@@ -78,12 +78,12 @@ const sharedFooterLayout = `
         <div id="footer-list" class="d-flex flex-column">
             <h3>About Syria</h3>
             <hr>
-            <a href="#">History</a>
+            <a href="history.html">History</a>
             <a href="culture.html">Culture</a>
-            <a href="#">Geography</a>
-            <a href="#">Economy</a>
-            <a href="pemerintahan.html">Government</a>
-            <a href="#">Current Events</a>
+            <a href="traditions">Traditions</a>
+            <a href="geography">Geography</a>
+            <a href="tourism.html">Tourism</a>
+            <a href="visas.html">Visas & Immigration</a>
         </div>
         <div id="footer-list" class="d-flex flex-column">
             <h3>Attractions</h3>

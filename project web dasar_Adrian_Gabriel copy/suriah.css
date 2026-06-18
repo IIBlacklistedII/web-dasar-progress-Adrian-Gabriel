@@ -1,44 +1,5 @@
 /* ==========================================================================
-   1. Core Layout & Base Elements
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f4f4f4;
-}
-
-.konten {
-    padding: 80px 10%; /* Integrated from about.html */
-    background-color: #f9f9f9;
-    color: #333;
-    font-family: sans-serif;
-}
-
-.konten-padded {
-    padding: 80px 10%;
-}
-
-.konten h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #222;
-    border-bottom: 3px solid #fc0;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.konten p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-/* ==========================================================================
-   2. Navigation Header & Custom Mega Dropdowns
+   Navigation Header & Custom Mega Dropdowns
    ========================================================================== */
 .navbar {
     display: flex;
@@ -152,7 +113,161 @@ body {
 }
 
 /* ==========================================================================
-   3. Hero Components & Vertical Text Carousel
+   6. Footer Enhancements & Link States
+   ========================================================================== */
+.bagian-footer {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 50px 10%;
+}
+
+.bagian-footer h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.bagian-footer hr {
+    border-top: 2px solid #fc0;
+    opacity: 1;
+    margin-bottom: 15px;
+    width: 50px;
+}
+
+/* Base style for footer anchors */
+.bagian-footer a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 0;
+    transition: color 0.25s ease;
+    display: inline-block;
+}
+
+/* Hover transition to Golden Yellow */
+.bagian-footer a:hover {
+    color: #fc0 !important;
+}
+
+/* ==========================================================================
+   Exploring Syria Landing Page (suriah.html) Styles
+========================================================================== */
+
+/* Page Title Heading */
+#card-title{
+    font-size: 5rem;
+}
+
+/* Base Component Settings for Content Cards */
+.bg-card {
+    position: relative;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: none;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+    z-index: 1;
+}
+
+/* Universal Dark Baseline Overlay Gradient */
+.bg-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.85) 100%);
+    z-index: 2;
+    transition: opacity 0.35s ease;
+}
+
+/* Independent Dynamic Hover Overlay (Captures custom HTML --overlay-color) */
+.bg-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(var(--overlay-color) 100%);
+    opacity: 0;
+    z-index: 3;
+    transition: opacity 0.4s ease;
+}
+
+
+/* Activates color shift when card is hovered */
+.bg-card:hover::after {
+    opacity: 1;
+}
+
+/* Card Heading Header Block */
+.card-content {
+    position: relative;
+    z-index: 4;
+    transition: transform 0.35s ease;
+}
+
+.card-content h2 {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Collapsed Hidden Detailed View Frame */
+.card-details {
+    position: relative;
+    z-index: 4;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.35s ease;
+}
+
+.card-details p {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.card-details hr {
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin: 10px 0;
+}
+
+.bg-card:hover .card-details {
+    max-height: 320px;
+    opacity: 1;
+}
+
+
+/* --- Responsive Breakpoints & Adaptability Fixes --- */
+
+@media (max-width: 768px) {
+    /* Downscale large page heading */
+    #card-title {
+        font-size: 2.2rem;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Shrink baseline height parameters for tablet/mobile columns */
+    .bg-card {
+        min-height: 450px;
+    }
+    
+    /* Auto-reveal detail components on touch-screen viewports (fallback mechanism) */
+    .card-details {
+        max-height: 300px;
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   Hero Components & Vertical Text Carousel
    ========================================================================== */
 .bagian-hero {
     width: 100%;
@@ -264,247 +379,16 @@ body {
 }
 
 /* ==========================================================================
-   4. Culture Page Content Intro Elements
-   ========================================================================== */
-.custom-culture-title {
+   Exploring About Government Page (pemerintahan.html) Styles
+========================================================================== */
+
+.custom-government-title {
     color: #222;
     letter-spacing: 1px;
 }
 
-.title-divider {
-    width: 60px;
-    height: 4px;
-    background-color: #fc0;
-    border-radius: 2px;
-}
-
-.pre-content .lead {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    border-left: 3px solid rgba(255, 204, 0, 0.4);
-    padding-left: 20px;
-    margin-top: 25px;
-    text-align: left;
-}
-
-.culture-desc {
-    font-size: 1.05rem;
-    text-align: justify;
-}
-
-/* Custom height restriction for the culture image slider */
-#carouselCulture .carousel-inner {
-    /* Adjust this value to exactly how short you want the slider to be */
-    height: 500px; 
-}
-
-#carouselCulture .carousel-item img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; 
-    object-position: center bottom;
-}
-
-@media (max-width: 768px) {
-    .pre-content .lead {
-        border-left: none;
-        padding-left: 0;
-        text-align: center;
-    }
-    .culture-desc {
-        text-align: center;
-    }
-    
-    #carouselCulture .carousel-inner {
-        height: 250px; 
-    }
-}
-
 /* ==========================================================================
-   5. Interactive Accordion Collapse Cards 
-   ========================================================================== */
-.culture-interactive-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    cursor: default !important; /* Forces normal cursor style over card */
-}
-
-.culture-interactive-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
-    transform: translateY(-2px);
-}
-
-.culture-header-trigger {
-    cursor: default !important; /* Forces normal cursor style over heading */
-}
-
-.culture-card-img {
-    width: 100%;
-    height: 240px; /* Enhanced viewable height for vertical stacking */
-    object-fit: cover;
-    object-position: center;
-}
-
-.small-text-justified {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    text-align: justify;
-}
-
-/* Arrow indicator positioning mechanics */
-.toggle-arrow {
-    font-size: 0.85rem;
-    color: #666;
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-
-/* Spin arrow when the target card is expanded active */
-.culture-interactive-card[aria-expanded="true"] .toggle-arrow {
-    transform: rotate(180deg);
-    color: #fc0;
-}
-
-@media (max-width: 576px) {
-    .culture-card-img {
-        height: 180px;
-    }
-    .small-text-justified {
-        text-align: center;
-    }
-}
-
-/* ==========================================================================
-   6. Footer Enhancements & Link States
-   ========================================================================== */
-.bagian-footer {
-    width: 100%;
-    background-color: #222;
-    color: white;
-    padding: 50px 10%;
-}
-
-.bagian-footer h3 {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.bagian-footer hr {
-    border-top: 2px solid #fc0;
-    opacity: 1;
-    margin-bottom: 15px;
-    width: 50px;
-}
-
-/* Base style for footer anchors */
-.bagian-footer a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 6px 0;
-    transition: color 0.25s ease;
-    display: inline-block;
-}
-
-/* Hover transition to Golden Yellow */
-.bagian-footer a:hover {
-    color: #fc0 !important;
-}
-
-/* ==========================================================================
-   7. Exploring Syria Content Cards & Gradient Overlays
-   ========================================================================== */
-.bg-card {
-    position: relative;
-    height: 550px; /* Uniform dimension framework */
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border: none;
-    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
-    z-index: 1;
-}
-
-/* Permanent subtle dark fallback baseline overlay */
-.bg-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.85) 100%);
-    z-index: 2;
-    transition: opacity 0.35s ease;
-}
-
-/* Independent Dynamic Hover Overlay Gradient Generator */
-.bg-card::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    /* Dynamically captures custom --overlay-color assigned in your HTML elements */
-    background: linear-gradient(var(--overlay-color) 100%);
-    opacity: 0;
-    z-index: 3;
-    transition: opacity 0.4s ease;
-}
-
-/* Illuminates color state shifts on hover */
-.bg-card:hover::after {
-    opacity: 1;
-}
-
-#card-title{
-    font-size: 5rem;
-}
-
-/* Card Content Positioning & Transition Layers */
-.card-content {
-    position: relative;
-    z-index: 4;
-    transition: transform 0.35s ease;
-}
-
-.card-content h2 {
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.card-details {
-    position: relative;
-    z-index: 4;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.35s ease;
-}
-
-.card-details p {
-    color: #e0e0e0;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-.card-details hr {
-    border-top: 1px solid rgba(255,255,255,0.4);
-    margin: 10px 0;
-}
-
-/* Elevates and displays text cards systematically when hovering over elements */
-.bg-card:hover .card-details {
-    max-height: 200px;
-    opacity: 1;
-}
-
-/* ==========================================================================
-   8. Government Organizational Branch Diagram
+    Government Organizational Branch Diagram
    ========================================================================== */
 .org-chart-container {
     width: 100%;
@@ -633,10 +517,6 @@ body {
     z-index: 1;
 }
 
-/* ==========================================================================
-   9. Pure CSS Hover Expansion & Sizing Mechanics
-   ========================================================================== */
-/* Base Node State */
 .org-node {
     /* WIDENED: Increased from 280px to 320px for a more substantial idle card */
     width: 320px;
@@ -780,8 +660,186 @@ body {
 }
 
 /* ==========================================================================
-   History Page Timeline Styles
-   ========================================================================== */
+   About Ground Transportation Page (transportasi-darat.html) Styles
+========================================================================== */
+
+.konten-transport {
+    padding: 60px 0;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.konten-transport h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 3px solid #fc0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.konten-transport p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+.table-transport {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-transport th {
+    background-color: #222;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}
+
+
+.travel-tip {
+    border-left: 4px solid #fc0;
+    background-color: #fffdf5;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ==========================================================================
+   About Air & Water Transportation Page (transportasi-air-laut.html) Styles
+========================================================================== */
+
+.transport-hub-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-top: 4px solid #222;
+    transition: transform 0.2s;
+}
+
+.transport-hub-card:hover {
+    transform: translateY(-3px);
+}
+
+.hub-air { border-top-color: #0d6efd; }
+.hub-sea { border-top-color: #20c997; }
+
+.hub-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.hub-body {
+    padding: 20px;
+}
+
+/* ==========================================================================
+   About Entrance Fee Page (entrance-fee.html) Styles
+========================================================================== */
+
+.konten-fees {
+    padding: 60px 0;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.konten-fees h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 3px solid #fc0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+
+.table-fees {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-fees th {
+    background-color: #222;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}
+
+
+.rules-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid #222;
+}
+
+.rules-tax { 
+    border-left-color: #dc3545;
+} 
+.rules-cash { 
+    border-left-color: #ffc107;
+} 
+.rules-camera { 
+    border-left-color: #0d6efd;
+}
+
+/* ==========================================================================
+   About Visa Page (visas.html) Styles
+========================================================================== */
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #fc0;
+    border-radius: 2px;
+}
+
+.pre-content-visa .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    border-left: 3px solid rgba(255, 204, 0, 0.4);
+    padding-left: 20px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.visa-desc {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    .pre-content-visa .lead {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .visa-desc {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   About History Page (history.html) Styles
+========================================================================== */
+
+.konten-history {
+    padding: 80px 10%; /* Integrated from about.html */
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: sans-serif;
+}
+
 .timeline-section {
     padding: 40px 0;
 }
@@ -906,174 +964,114 @@ body {
 }
 
 /* ==========================================================================
-   12. TRADITIONS PAGE STYLES
-   ========================================================================== */
-
-/* Make cards explicitly indicate clickability */
-[data-bs-toggle="collapse"][role="button"] {
-    cursor: pointer;
-    user-select: none; /* Prevents text highlighting on rapid double clicks */
-}
-
-/* Ensure dropdown images scale cleanly and maintain height consistency */
-.custom-dropdown-img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover; /* Crops image cleanly without distorting aspect ratio */
-    transition: opacity 0.3s ease;
-}
-
-/* Optional styling tweak to make card layout hover states feel smoother */
-.transition-hover {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.transition-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
-}
-
-/* --- Typography & Text Utilities --- */
-.tracking-wider {
-    letter-spacing: 0.125em;
-}
-
-/* --- Layout Containers & Shadows --- */
-.shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
-}
-
-/* ==========================================================================
-   12. GROUND TRANSPORT PAGE STYLES
-   ========================================================================== */
-
-   .hero-shorter {
-        height: 50vh ; 
-    }
-
-    .konten-transport {
-        padding: 60px 0;
-        color: #333;
-        font-family: sans-serif;
-    }
-
-    .konten-transport h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: #222;
-        border-bottom: 3px solid #fc0;
-        padding-bottom: 10px;
-        display: inline-block;
-    }
-
-    .konten-transport p {
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 15px;
-    }
-
-    
-    .table-transport {
-        background-color: white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .table-transport th {
-        background-color: #222;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-    }
-
-    
-    .travel-tip {
-        border-left: 4px solid #fc0;
-        background-color: #fffdf5;
-        padding: 20px;
-        border-radius: 0 8px 8px 0;
-    }
-
-/* ==========================================================================
-    13. Responsive Overrides & Fixes
+   About Culture Page (culture.html) Styles
 ========================================================================== */
 
-/* Fix: Make the "Exploring Syria" Title Responsive */
-#card-title {
-    font-size: 3.5rem; /* Reduced from 5rem for better baseline scaling */
+.custom-culture-title {
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #fc0;
+    border-radius: 2px;
+}
+
+.pre-content .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    border-left: 3px solid rgba(255, 204, 0, 0.4);
+    padding-left: 20px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.culture-desc {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Custom height restriction for the culture image slider */
+#carouselCulture .carousel-inner {
+    /* Adjust this value to exactly how short you want the slider to be */
+    height: 500px; 
+}
+
+#carouselCulture .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    object-position: center bottom;
 }
 
 @media (max-width: 768px) {
-    #card-title {
-        font-size: 2.2rem;
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
+    .pre-content .lead {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .culture-desc {
+        text-align: center;
+    }
+    
+    #carouselCulture .carousel-inner {
+        height: 250px; 
     }
 }
 
-/* Fix: Enhance Section 3 Hero Text Responsiveness for Medium/Small screens */
-@media (max-width: 1024px) {
-    .hero-sentence-wrapper {
-        flex-direction: column;
-        align-items: center;
-        white-space: normal;
-        gap: 0px;
-    }
-    .hero-static-lead {
-        font-size: 4rem; /* Smoother scaling for tablets */
-    }
-    .carousel-vertical {
-        height: 5.5rem;
-        width: 100%;
-    }
-    .carousel-vertical .carousel-item h3 {
-        font-size: 4rem;
-        line-height: 5.5rem;
-        text-align: center;
-        width: 100%;
-    }
+/* ==========================================================================
+   Interactive Accordion Collapse Cards 
+   ========================================================================== */
+.culture-interactive-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default !important; /* Forces normal cursor style over card */
+}
+
+.culture-interactive-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    transform: translateY(-2px);
+}
+
+.culture-header-trigger {
+    cursor: default !important; /* Forces normal cursor style over heading */
+}
+
+.culture-card-img {
+    width: 100%;
+    height: 240px; /* Enhanced viewable height for vertical stacking */
+    object-fit: cover;
+    object-position: center;
+}
+
+.small-text-justified-culture {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    text-align: justify;
+}
+
+/* Arrow indicator positioning mechanics */
+.toggle-arrow-culture {
+    font-size: 0.85rem;
+    color: #666;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Spin arrow when the target card is expanded active */
+.culture-interactive-card[aria-expanded="true"] .culture-header-trigger .toggle-arrow-culture {
+    transform: rotate(180deg);
+    color: #fc0;
 }
 
 @media (max-width: 576px) {
-    .hero-static-lead {
-        font-size: 2.5rem;
+    .culture-card-img {
+        height: 180px;
     }
-    .carousel-vertical {
-        height: 3.8rem;
-    }
-    .carousel-vertical .carousel-item h3 {
-        font-size: 2.5rem;
-        line-height: 3.8rem;
-    }
-    .hero-tagline {
-        font-size: 1rem;
-        padding: 0 15px;
-    }
-}
-
-/* Fix: Section 7 Content Cards Scaling Framework */
-.bg-card {
-    height: auto; /* Allow auto stretching on collapse fallback */
-    min-height: 520px; /* Secure ideal vertical framing height */
-}
-
-.card-details p {
-    font-size: 0.9rem; /* Slightly smaller for structural text wrapping balance */
-}
-
-/* Fix: Open up container ceiling so long paragraphs + custom buttons can render fully */
-.bg-card:hover .card-details {
-    max-height: 320px; /* Raised from 200px to avoid button clipping */
-}
-
-/* Responsive adjustment for bootstrap stacked columns */
-@media (max-width: 768px) {
-    .bg-card {
-        min-height: 450px;
-    }
-    /* Optional: Reveal elements by default on touch screens since there is no 'hover' state */
-    .card-details {
-        max-height: 300px;
-        opacity: 1;
+    .small-text-justified-culture {
+        text-align: center;
     }
 }

@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suriah.css">
 
     <title>Exploring Syria - Visas</title>
 </head>
 
 <body>
-    <!-- Navbar Component Container -->
     <div id="navbar-placeholder"></div>
 
     <main class="konten">
-        <!-- Section 1: Visual Hero Showcase -->
-        <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" class="d-block w-100" alt="Damascus Administration Building">
-                </div>
+        <section class="text-white text-center py-5 mb-5 position-relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/DamascusAzemPalaceLargeCrtyd.jpg" alt="" class="img-fluid w-100 position-absolute top-0 start-0 h-100 object-fit-cover">
+            <div class="container py-4 position-relative z-1">
+                <h1 class="display-4 fw-bold mt-2">FEES & REGULATIONS</h1>
+                <p class="lead mx-auto col-md-8 text-light-50">
+                    Historical Sites Tickets, Taxes, and Payment Rules
+                </p>
             </div>
-        </div>
-
-        <!-- Section 2: About Visas & Core Entry Requirements -->
-        <div class="pre-content container my-5 py-3">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50 "></div>
+        </section>
+        
+        <div class="pre-content-visa container my-5 py-3">
             <h1 class="text-center display-4 fw-bold custom-culture-title">Visas &amp; Immigration</h1>
             <div class="title-divider mx-auto mb-4"></div>
             
@@ -38,20 +37,19 @@
                     <p class="lead text-secondary fst-italic mb-4">
                         "Navigating your entry requirements is the first essential step toward exploring the deep historical roots of Syria."
                     </p>
-                    <p class="culture-desc text-muted lh-lg">
+                    <p class="visa-desc text-muted lh-lg">
                         All international travelers wishing to visit Syria are required to obtain a valid entry visa prior to arrival. To secure a tourist visa, applicants must submit a completed application form, a passport with at least six months of validity beyond the intended stay, passport-sized photographs, and proof of a booked travel itinerary or a security clearance processed via an authorized local tour operator. Please note that passports must not contain any entry or exit stamps from Israel, as this will result in an immediate denial of entry.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- Section 3: Interactive Logistics Grid (Alternating Double-Columns) -->
         <div class="container my-5 px-4">
             <div class="row g-4 align-items-start">
                 
                 <!-- Pillar 1: Application Steps -->
                 <div class="col-md-6">
-                    <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseSteps" aria-expanded="false" aria-controls="collapseSteps">
+                    <div class="card shadow-sm visa-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseSteps" aria-expanded="false" aria-controls="collapseSteps">
                         <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
                             <span class="fs-4 fw-semibold text-dark m-0">The Application Process</span>
                             <span class="toggle-arrow">▼</span>
@@ -60,7 +58,7 @@
                         <div class="collapse" id="collapseSteps">
                             <div class="card-body pt-0 px-4 pb-4">
                                 <hr class="mt-0">
-                                <p class="text-muted mb-0 small-text-justified">
+                                <p class="text-muted mb-0 small-text-justified-visa">
                                     Independent tourist visa applications can be requested directly at your nearest Syrian Embassy or Consulate. Alternatively, the most common route is acquiring a <strong>Security Clearance</strong> through an approved Syrian travel agency, which grants you a visa-on-arrival at land borders or the airport. Processing times generally range from two to several weeks depending on your nationality.
                                 </p>
                             </div>
@@ -73,7 +71,7 @@
                     <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseFees" aria-expanded="false" aria-controls="collapseFees">
                         <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
                             <span class="fs-4 fw-semibold text-dark m-0">Visa Fees &amp; Border Customs</span>
-                            <span class="toggle-arrow">▼</span>
+                            <span class="toggle-arrow-visa">▼</span>
                         </div>
                         
                         <div class="collapse" id="collapseFees">
@@ -90,7 +88,6 @@
             </div>
         </div>
 
-        <!-- Section 4: Interactive Visa Fee Calculator -->
         <div class="container my-5 px-4">
             <div class="row justify-content-center">
                 <div class="col-lg-8">

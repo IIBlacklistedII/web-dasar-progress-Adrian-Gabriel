@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suriah.css">
 
     <title>Exploring Syria - Diverse Geography</title>
 </head>
 
 <body>
-    <!-- Navbar Component Container -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Content Engine -->
     <main class="konten">
-        <!-- Landscape Image Slider Component Wrapper -->
         <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2500">
@@ -33,7 +30,6 @@
             </div>
         </div>
 
-        <!-- Section 1: Intro Frame Header -->
         <div class="pre-content container my-5 py-3">
             <h1 class="text-center display-4 fw-bold custom-culture-title">Geographical Wonders</h1>
             <div class="title-divider mx-auto mb-4"></div>
@@ -50,11 +46,67 @@
             </div>
         </div>
 
-        <!-- Section 2: Interactive Accordion Regional Cards -->
         <div class="container my-5 px-4">
-            <div class="row g-4 align-items-start">
-                
-                <!-- Region 1: The Mediterranean Coast & Plains -->
+            <div class="d-flex flex-column align-items-center text-center mb-4">
+                <span class="text-uppercase tracking-wider text-warning small fw-bold">Terrain Metrics</span>
+                <h2 class="h4 fw-bold mt-1 text-dark">Ecological Cross-Sections</h2>
+            </div>
+            
+            <div class="row g-3 justify-content-center">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-3 bg-white border rounded-3 text-center shadow-xs transition-hover h-100">
+                        <div class="text-primary mb-2 fs-3"><i class="bi bi-moisture"></i></div>
+                        <span class="d-block text-muted small text-uppercase fw-semibold">Coastal Humidity</span>
+                        <div class="display-6 fw-bold text-dark my-1">75%</div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Sustaining citrus & olive orchards</small>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-3 bg-white border rounded-3 text-center shadow-xs transition-hover h-100">
+                        <div class="text-warning mb-2 fs-3"><i class="bi bi-sun"></i></div>
+                        <span class="d-block text-muted small text-uppercase fw-semibold">Desert Badlands</span>
+                        <div class="display-6 fw-bold text-dark my-1">42°C</div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Arid expanse of the Badia plateau</small>
+                    </div>
+                </div>
+
+                <!-- Biome 3 -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-3 bg-white border rounded-3 text-center shadow-xs transition-hover h-100">
+                        <div class="text-success mb-2 fs-3"><i class="bi bi-droplet-half"></i></div>
+                        <span class="d-block text-muted small text-uppercase fw-semibold">River Basins</span>
+                        <div class="display-6 fw-bold text-dark my-1">2.4B m³</div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Annual Euphrates irrigation flow</small>
+                    </div>
+                </div>
+
+                <!-- Biome 4 -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-3 bg-white border rounded-3 text-center shadow-xs transition-hover h-100">
+                        <div class="text-info mb-2 fs-3"><i class="bi bi-snow"></i></div>
+                        <span class="d-block text-muted small text-uppercase fw-semibold">Peak Elevations</span>
+                        <div class="display-6 fw-bold text-dark my-1">2,814m</div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Snow-capped Mount Hermon ridges</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 px-4">
+            <div class="row g-4 align-items-start">                
                 <div class="col-md-6">
                     <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseCoastal" aria-expanded="false" aria-controls="collapseCoastal">
                         <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">

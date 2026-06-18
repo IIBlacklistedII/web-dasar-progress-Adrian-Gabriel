@@ -8,18 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suriah.css">
 
     <title>Exploring Syria - Tourism</title>
 </head>
 
 <body>
-    <!-- Navbar Component Container -->
     <div id="navbar-placeholder"></div>
 
-    <!-- MAIN CONTENT MODULE START -->
     <main class="konten">
-        <!-- Section 1: Immersive Tourism Landscape Carousel -->
         <div id="carouselCulture" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2500">
@@ -34,7 +31,6 @@
             </div>
         </div>
 
-        <!-- Section 2: Informative Intro Block Header -->
         <div class="pre-content container my-5 py-3">
             <h1 class="text-center display-4 fw-bold custom-culture-title">Travel & Tourism</h1>
             <div class="title-divider mx-auto mb-4"></div>
@@ -51,12 +47,8 @@
             </div>
         </div>
 
-        <!-- Section 3: Interactive Travel Guide Accordion Grid -->
         <div class="container my-5 px-4">
-            <!-- Row 1: Historical Excursions & Travel Basics -->
-            <div class="row g-4 align-items-start">
-                
-                <!-- Card 1: Guided Historical Tours -->
+            <div class="row g-4 align-items-start">        
                 <div class="col-md-6">
                     <div class="card shadow-sm culture-interactive-card border-0" data-bs-toggle="collapse" data-bs-target="#collapseTours" aria-expanded="false" aria-controls="collapseTours">
                         <div class="p-4 d-flex justify-content-between align-items-center culture-header-trigger">
@@ -96,9 +88,154 @@
 
             </div>
         </div>
+
+        <div class="container my-5 px-4">
+            <div class="text-center mb-4">
+                <span class="text-uppercase tracking-wider text-warning small fw-bold">Planning Essentials</span>
+                <h2 class="h4 fw-bold mt-1 text-dark">Explore by Travel Focus</h2>
+            </div>
+            
+            <div class="row g-3 justify-content-center align-items-start">
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white border rounded-3 text-center shadow-sm transition-hover h-100 d-flex flex-column align-items-center justify-content-center"
+                         data-bs-toggle="collapse" 
+                         data-bs-target="#focusArchaeology" 
+                         role="button" 
+                         aria-expanded="false" 
+                         aria-controls="focusArchaeology">
+                        <div class="text-warning mb-2 fs-2">
+                            <i class="bootstrap-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16"><path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h.89zM2 7v7h3V7zm4 0v7h4V7zm5 0v7h3V7zM1.11 5h13.78L8 1.5zM1.5 15h13l-.25-1H1.75z"/></svg>
+                            </i>
+                        </div>
+                        <span class="d-block text-dark fw-bold small text-uppercase mb-1">Ancient Sites</span>
+                        <p class="text-muted mb-0 xx-small text-center lh-sm" style="font-size: 0.75rem;">Palmyra &amp; Roman ruins</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white border rounded-3 text-center shadow-sm transition-hover h-100 d-flex flex-column align-items-center justify-content-center"
+                         data-bs-toggle="collapse" 
+                         data-bs-target="#focusCulinary" 
+                         role="button" 
+                         aria-expanded="false" 
+                         aria-controls="focusCulinary">
+                        <div class="text-warning mb-2 fs-2">
+                            <i class="bootstrap-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cake2" viewBox="0 0 16 16"><path d="M3.05 3.05a2.5 2.5 0 0 1 4.9 0A2.5 2.5 0 0 1 12.85 3a2.5 2.5 0 0 1 2.1 3.555A2.5 2.5 0 0 1 13.5 11v3a1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1v-3a2.5 2.5 0 0 1-1.555-4.445A2.5 2.5 0 0 1 3.05 3.05M8 4.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m5.5 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M3.5 11h9a1.5 1.5 0 0 0 1.5-1.5v-1h-12v1A1.5 1.5 0 0 0 3.5 11m10.5-4a1.5 1.5 0 0 0-3 0h3zm-12 0h3a1.5 1.5 0 0 0-3 0m1.5 5v2h9v-2z"/></svg>
+                            </i>
+                        </div>
+                        <span class="d-block text-dark fw-bold small text-uppercase mb-1">Local Cuisine</span>
+                        <p class="text-muted mb-0 xx-small text-center lh-sm" style="font-size: 0.75rem;">Souks &amp; traditional food</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white border rounded-3 text-center shadow-sm transition-hover h-100 d-flex flex-column align-items-center justify-content-center"
+                         data-bs-toggle="collapse" 
+                         data-bs-target="#focusNature" 
+                         role="button" 
+                         aria-expanded="false" 
+                         aria-controls="focusNature">
+                        <div class="text-warning mb-2 fs-2">
+                            <i class="bootstrap-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m0-1A7 7 0 1 1 8 1a7 7 0 0 1 0 14"/><path d="M10.186 5.814 8.5 10.186 5.814 10.186 5.814 5.814z"/><path d="m8.646 5.646-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L6.707 9l2.647-2.646a.5.5 0 0 0-.708-.708"/></svg>
+                            </i>
+                        </div>
+                        <span class="d-block text-dark fw-bold small text-uppercase mb-1">Nature Eco</span>
+                        <p class="text-muted mb-0 xx-small text-center lh-sm" style="font-size: 0.75rem;">Valleys &amp; coastal trails</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="p-4 bg-white border rounded-3 text-center shadow-sm transition-hover h-100 d-flex flex-column align-items-center justify-content-center"
+                         data-bs-toggle="collapse" 
+                         data-bs-target="#focusStays" 
+                         role="button" 
+                         aria-expanded="false" 
+                         aria-controls="focusStays">
+                        <div class="text-warning mb-2 fs-2">
+                            <i class="bootstrap-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16"><path d="M6 .278a.77.77.0 0 1 .08.858 7.2 7.2 0 0 0-.8 3.493 7.3 7.3 0 0 0 7.258 7.258c1.32 0 2.58-.35 3.679-1a.75.75 0 0 1 1.1 1 .8.8 0 0 1-.18.416 8.5 8.5 0 1 1-11.311-11.31c.193-.13.43-.172.65-.11a.7.7 0 0 1 .408.334z"/><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162a1.73 1.73 0 0 0-1.097-1.097l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
+                            </i>
+                        </div>
+                        <span class="d-block text-dark fw-bold small text-uppercase mb-1">Boutique Hotels</span>
+                        <p class="text-muted mb-0 xx-small text-center lh-sm" style="font-size: 0.75rem;">Authentic heritage stays</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3" id="travelFocusAccordion">
+                <div class="collapse" id="focusArchaeology" data-bs-parent="#travelFocusAccordion">
+                    <div class="card card-body bg-white border border-warning-subtle shadow-xs p-3 gap-2">
+                        <strong>🏛️ Recommended Archaeological Circuits:</strong> Explore the colonnaded avenues of Palmyra, marvel at the stone craft of the Roman Theatre of Bosra, or discover prehistoric findings inside Damascus' national heritage institutions.
+                        <div class="row g-6">
+                            <div class="col-6">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz5XARCH79vrLjwiVi2H0vnZdf96BDB9Z69xnS8pFq2A&s=10" 
+                                    class="w-100 rounded-2" 
+                                    alt="Palmyra Circuit"
+                                    style="height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://img.jakpost.net/c/2016/12/12/2016_12_12_17628_1481503877._large.jpg" 
+                                    class="w-100 rounded-2" 
+                                    alt="Roman Theatre"
+                                    style="height: 250px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="focusCulinary" data-bs-parent="#travelFocusAccordion">
+                    <div class="card card-body bg-white border border-warning-subtle shadow-xs p-3 gap-2">
+                        <strong>🍲 Culinary Trails & Traditional Souks:</strong> Take guided spice routes through Souq Al-Hamidiyah, sample traditional street delicacies, and join multi-generational families for slow-cooked Syrian dinners.
+                        <div class="row g-6">
+                            <div class="col-6">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg" 
+                                    class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Ancient_covered_souq%2C_Aleppo%2C_Syria.jpg" 
+                                    class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="focusNature" data-bs-parent="#travelFocusAccordion">
+                    <div class="card card-body bg-white border border-warning-subtle shadow-xs p-3 gap-2">
+                        <strong>🏔️ Eco-Tourism Outposts:</strong> Hike through alpine settings along the Coastal Mountain ranges, camp out near the lush Mediterranean valleys, or track ancestral waterways feeding into the Syrian plains.
+                        <div class="row g-6">
+                            <div class="col-6">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9WsplYcPOvjg4szKesKIMLNMBFKnaqMYX1bgkAZ5f7f6uH4fEhPNiVUh&s=10" class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://cdn.britannica.com/35/11435-050-FBB227B8/Golan-Heights-border-Syrian-Israeli.jpg" 
+                                    class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="focusStays" data-bs-parent="#travelFocusAccordion">
+                    <div class="card card-body bg-white border border-warning-subtle shadow-xs p-3 gap-2">
+                        <strong>🏨 Heritage Living Spaces:</strong> Rest inside beautifully converted old Damascus palaces featuring internal open-air stone courtyards, trickling fountains, and historic orange trees.
+                        <div class="row g-6">
+                            <div class="col-6">
+                                <img src="https://www.travelingtheunknown.com/wp-content/uploads/2023/04/beit-al-mamlouka-hotel.jpg" 
+                                    class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://www.imtilakgroup.com/cdn-cgi/image/format=auto,fit=contain/https://imt-assets.fra1.digitaloceanspaces.com/Safaraq/posts/48dba671b84dae914eb050e35602fdf27V9_295kP7.webp" 
+                                    class="w-100 rounded-2" style="height: 250px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer Component Container -->
     <div id="footer-placeholder"></div>
 
 </body>
