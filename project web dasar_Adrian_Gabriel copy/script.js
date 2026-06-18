@@ -162,12 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (navbarElement) {
             const currentPath = window.location.pathname;
             
-            if (currentPath.endsWith('suriah.html') || currentPath.endsWith('/')) {
+            if (currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
                 // Remove dark block background style on home page hero
                 navbarElement.classList.remove('navbar-dark-solid');
                 
                 // Track down and strip out the home navigation page links list object
-                const homeLink = navbarPlaceholder.querySelector('.nav-links a[href="suriah.html"]');
+                const homeLink = navbarPlaceholder.querySelector('.nav-links a[href="index.html"]');
                 if (homeLink) {
                     const homeLi = homeLink.closest('li');
                     if (homeLi) homeLi.remove(); 
