@@ -109,7 +109,7 @@
 }
 
 /* ==========================================================================
-   6. Footer Enhancements & Link States
+   Footer Enhancements & Link States
    ========================================================================== */
 .bagian-footer {
     width: 100%;
@@ -1025,4 +1025,250 @@
     .small-text-justified-culture {
         text-align: center;
     }
+}
+
+/* ==========================================================================
+   Universal Styles for Hotels & Tours Footer
+========================================================================== */
+
+.listing-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-card.luxury {
+    border-top-color: #fc0;
+}
+
+.listing-card.budget {
+    border-top-color: #20c997;
+}
+
+.listing-card.tour {
+    border-top-color: #0d6efd;
+}
+
+.listing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.listing-img {
+    width: 100%;
+    height: 220px;
+    max-height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.listing-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-badge {
+    align-self: flex-start;
+    background-color: #222;
+    color: #fc0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.listing-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.image_tours {
+    width: 250px;
+    min-width: 250px;
+    height: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==========================================================================
+   Aleppo Hotels & Tours Page (Aleppo.html) Styles
+========================================================================== */
+
+.hero-aleppo {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://www.imtilakgroup.com/cdn-cgi/image/format=auto,fit=contain/https://imt-assets.fra1.digitaloceanspaces.com/Safaraq/posts/dad91aa86dcdcd42743913a53779395fRe0_483g2j.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-aleppo .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-aleppo h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fc0;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Damascus Hotels & Tours Page (Damascus.html) Styles
+========================================================================== */
+
+.hero-damascus {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://i0.wp.com/awaywiththesteiners.com/wp-content/uploads/2025/03/480317495_1325488741890043_2895519407547919318_n.jpg?fit=1600%2C1067&ssl=1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-damascus .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-damascus h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fc0;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Hama Hotels & Tours Page (Hama.html) Styles
+========================================================================== */
+
+.hero-hama {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPRdqj5IGbxrD3LUm6Ie4lKitzT-84h6XotDvGCgIb4A&s=10');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-hama .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-hama h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fc0;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Homs Hotels & Tours Page (Homs.html) Styles
+========================================================================== */
+
+.hero-homs {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ94NrAnGS84zxDgHUCktWqTJ3fpp8ntfYg33TPdVKYA6A1uY7BgNkPXYi&s=10');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-homs .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-homs h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fc0;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Latakia Hotels & Tours Page (Latakia.html) Styles
+========================================================================== */
+
+.hero-latakia {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLdOelxrSQ9ySmJyZg0lOMECdToaqRPgDasSQhYAuQVc4tKR56Uyse_-h&s=10');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-latakia .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-latakia h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fc0;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }

@@ -3,11 +3,10 @@ const sharedNavbarLayout = `
 <nav class="navbar navbar-dark-solid">
     <div class="logo">
         <img src="Emblem_of_Syria.svg" class="img-fluid d-block mx-auto" alt="Responsive SVG description">
-        <a href="suriah.html">SURIAH</a>
+        <a href="index.html">SURIAH</a>
     </div>
 
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li class="custom-dropdown-container">
             <a href="#" class="custom-dropbtn">General Information</a>
 
@@ -101,11 +100,11 @@ const sharedFooterLayout = `
         <div id="footer-list" class="d-flex flex-column">
             <h3>Hotels & Tours</h3>
             <hr>
-            <a href="#">Damascus</a>
-            <a href="#">Aleppo</a>
-            <a href="#">Homs</a>
-            <a href="#">Hama</a>
-            <a href="#">Lattakia</a>
+            <a href="damascus.html">Damascus</a>
+            <a href="aleppo.html">Aleppo</a>
+            <a href="homs.html">Homs</a>
+            <a href="hama.html">Hama</a>
+            <a href="lattakia.html">Lattakia</a>
         </div>
     </div>
 </footer>
@@ -224,27 +223,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // ==========================================================================
 const quizQuestions = [
     {
-        question: "Which Syrian city is widely considered one of the oldest continuously inhabited cities in the world?",
+        question: "Kota mana di Suriah yang secara luas dianggap sebagai salah satu kota tertua di dunia yang terus dihuni hingga kini?",
         options: ["Palmyra", "Damascus", "Latakia", "Bosra"],
         answer: 1
     },
     {
-        question: "The magnificent ancient desert trading hub ruled by Queen Zenobia was:",
+        question: "Pusat perdagangan gurun kuno yang megah yang diperintah oleh Ratu Zenobia adalah: ",
         options: ["Aleppo", "Mari", "Palmyra", "Ebla"],
         answer: 2
     },
     {
-        question: "Which language was standardized as a regional trading medium across inland Syria during the Iron Age?",
+        question: "Bahasa apa yang distandarkan sebagai sarana perdagangan regional di seluruh wilayah pedalaman Suriah selama Zaman Besi?" ,
         options: ["Greek", "Latin", "Aramaic", "Arabic"],
         answer: 2
     },
     {
-        question: "Following Alexander the Great's conquest, which massive empire made Antioch its capital and transformed Syria into a Hellenistic epicenter?",
-        options: ["The Seleucid Empire", "The Byzantine Empire", "The Ottoman Empire", "The Roman Empire"],
+        question: "Setelah penaklukan yang dilakukan oleh Alexander Agung, kerajaan besar manakah yang menjadikan Antiokhia sebagai ibukotanya dan mengubah Suriah menjadi pusat peradaban Helenistik?",
+        options: ["Kekaisaran Seleukia", "Kekaisaran Bizantium", "Kekaisaran Ottoman", "Kekaisaran Romawi"],
         answer: 0
     },
     {
-        question: "Sultan Saladin unified regional factions during the Crusader wars from his base in which historical Syrian city?",
+        question: "Dari kota bersejarah mana di Suriah, Sultan Saladin menyatukan berbagai faksi regional selama Perang Salib?",
         options: ["Mari", "Ebla", "Latakia", "Damascus"],
         answer: 3
     }
@@ -272,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const submitBtn = quizForm.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Submit Answer";
+            submitBtn.textContent = "Submit";
         }
         
         const qData = quizQuestions[currentQuestionIndex];
@@ -312,14 +311,14 @@ document.addEventListener('DOMContentLoaded', function () {
             feedbackAlert.innerHTML = "✨ <strong>Correct!</strong>";
         } else {
             feedbackAlert.className = "alert alert-danger m-0";
-            feedbackAlert.innerHTML = `❌ <strong>Incorrect.</strong> The correct answer was: <strong>${quizQuestions[currentQuestionIndex].options[correctAnswer]}</strong>.`;
+            feedbackAlert.innerHTML = `❌ <strong>Salah.</strong> Jawaban yang benar adalah: <strong>${quizQuestions[currentQuestionIndex].options[correctAnswer]}</strong>.`;
         }
 
         // Alter the next button text if it is the absolute final question
         if (currentQuestionIndex === quizQuestions.length - 1) {
-            if (nextBtn) nextBtn.innerHTML = "View Final Results &rarr;";
+            if (nextBtn) nextBtn.innerHTML = "Lihat Hasil Akhir &rarr;";
         } else {
-            if (nextBtn) nextBtn.innerHTML = "Next Question &rarr;";
+            if (nextBtn) nextBtn.innerHTML = "Pertanyaan Berikutnya &rarr;";
         }
     });
 
@@ -334,11 +333,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 // End of quiz reached: Calculate the total final score percentage
                 const finalPercentage = Math.round((correctAnswersCount / quizQuestions.length) * 100);
                 
-                questionElement.innerHTML = `🏁 Quiz Complete!`;
+                questionElement.innerHTML = `🏁 Kuis Selesai!`;
                 optionsContainer.innerHTML = `
                     <div class="text-center py-3">
                         <p class="display-4 font-weight-bold mb-2 text-warning">${finalPercentage}%</p>
-                        <p class="lead">You correctly answered <strong>${correctAnswersCount}</strong> out of <strong>${quizQuestions.length}</strong> questions.</p>
+                        <p class="lead">Anda telah menjawab tepat <strong>${correctAnswersCount}</strong> dari <strong>${quizQuestions.length}</strong> pertanyaan.</p>
                     </div>
                 `;
                 
@@ -347,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const submitBtn = quizForm.querySelector('button[type="submit"]');
                 if (submitBtn) {
                     submitBtn.disabled = false;
-                    submitBtn.textContent = "🔄 Retake Quiz";
+                    submitBtn.textContent = "🔄 Ulangi Kuis";
                     
                     quizForm.onsubmit = function(event) {
                         event.preventDefault();
