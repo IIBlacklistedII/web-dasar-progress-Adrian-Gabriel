@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navbarElement.classList.remove('navbar-dark-solid');
                 
                 // Track down and strip out the home navigation page links list object
-                const homeLink = navbarPlaceholder.querySelector('.nav-links a[href="index.html"]');
+                const homeLink = navbarPlaceholder.querySelector('.nav-links li a[href="index.html"]');
                 if (homeLink) {
                     const homeLi = homeLink.closest('li');
                     if (homeLi) homeLi.remove(); 
