@@ -17,8 +17,9 @@
     <div id="navbar-placeholder"></div>
 
     <main class="konten konten-padded">
+        <!-- Section Header -->
         <div class="gov-header-block mb-4">
-            <h2 class="custom-government-title fs-1 text-center fw-bold text-uppercase">Current Government of Syria</h2>
+            <h2 class="custom-government-title">Current Government of Syria</h2>
         </div>
 
         <div class="org-chart-container">
@@ -89,6 +90,65 @@
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <footer class="bagian-footer">
+        <div class="d-flex flex-row justify-content-around gap-1">
+            <div id="footer-list" class="d-flex flex-column">
+                <h3>About Syria</h3>
+                <hr>
+                <a href="#">History</a>
+                <a href="culture.html">Culture</a>
+                <a href="#">Geography</a>
+                <a href="#">Economy</a>
+                <a href="pemerintahan.html">Government</a>
+                <a href="#">Current Events</a>
+            </div>
+            <div id="footer-list" class="d-flex flex-column">
+                <h3>Attractions</h3>
+                <hr>
+                <a href="#">Aleppo Citadel</a>
+                <a href="#">Crac des Chevaliers</a>
+                <a href="#">Dead Sea</a>
+                <a href="#">Orontes River</a>
+                <a href="#">Al-Ghab Plain</a>
+                <a href="#">Damascus Old City</a>
+                <a href="#">Hama Water Wheels</a>
+                <a href="#">Bosra Theater</a>
+            </div>
+            <div id="footer-list" class="d-flex flex-column">
+                <h3>Hotels & Tours</h3>
+                <hr>
+                <a href="#">Damascus</a>
+                <a href="#">Aleppo</a>
+                <a href="#">Homs</a>
+                <a href="#">Hama</a>
+                <a href="#">Lattakia</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+        // Ensure only one dropdown is open at a time; close on outside click or Escape.
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown-content.show-menu').forEach(menu => menu.classList.remove('show-menu'));
+        }
+
+        document.querySelectorAll('.dropbtn').forEach(function(btn) {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                const li = btn.closest('li') || btn.closest('.dropdown') || btn.parentElement;
+                const menu = li ? li.querySelector('.dropdown-content') : null;
+                if (!menu) return;
+                const isOpen = menu.classList.contains('show-menu');
+                closeAllDropdowns();
+                if (!isOpen) menu.classList.add('show-menu');
+            });
+        });
+
+        document.addEventListener('click', closeAllDropdowns);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDropdowns(); });
+    </script>
 </body>
 </html>

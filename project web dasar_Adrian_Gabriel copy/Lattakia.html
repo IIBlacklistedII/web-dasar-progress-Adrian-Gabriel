@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="suriah.css">
+    <script src="script.js"></script>
+
+    <title>Latakia Hotels & Unique Spots - Exploring Syria</title>
+
+    <style>
+        .hero-latakia {
+            width: 100%;
+            height: 60vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLdOelxrSQ9ySmJyZg0lOMECdToaqRPgDasSQhYAuQVc4tKR56Uyse_-h&s=10');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-latakia .hero-text {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        .hero-latakia h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: #fc0;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .listing-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #222;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .listing-card.luxury {
+            border-top-color: #fc0;
+        }
+
+        .listing-card.budget {
+            border-top-color: #20c997;
+        }
+
+        .listing-card.tour {
+            border-top-color: #0d6efd;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .listing-img {
+            width: 100%;
+            height: 220px;
+            max-height: 220px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .listing-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-badge {
+            align-self: flex-start;
+            background-color: #222;
+            color: #fc0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .listing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .image_tours {
+            width: 250px;
+            min-width: 250px;
+            height: 250px;
+            max-height: 250px;
+            min-height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero-latakia">
+        <div id="navbar-placeholder"></div>
+
+        <div class="hero-text">
+            <h1>Latakia</h1>
+            <p class="fs-5 opacity-75">Hotels & Unique Spots on the Mediterranean Coast</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <h2 class="fw-bold mb-3 border-bottom pb-3 d-inline-block" style="border-color: #fc0 !important;">Stay & Explore</h2>
+                <p class="text-muted" style="line-height: 1.8;">
+                    Latakia (Al-Ladhiqiyah) adalah kota pelabuhan utama Suriah yang menawarkan atmosfer segar khas Mediterania. Kota pesisir ini memadukan keindahan pantai pasir putih, barisan pohon palem, hidangan laut segar, serta jejak peradaban alfabet pertama di bumi.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mb-4">🏨 Recommended Hotels</h3>
+        <div class="row g-4 mb-5 pb-4">
+            <div class="col-md-4">
+                <div class="listing-card luxury">
+                    <img src="https://lh3.googleusercontent.com/gps-proxy/ALd4DhG-LYjACwN6EFnrBemudMLC_hN5BA0Zb1R_SvjGzc9-NoczO34Jz7ZhzpPiMzad5VzNGt8HB6JlFRPNIl5MQ_6GMuThwbv-kHGgKKSjl5B1c7p_3InX4Pp0ZK4qaN9uqTKCpML-kUDoUQgXXZoVU2NzWttXHKmm_PaYHx2Q_eXzBRNllrrAFCrb=w324-h312-n-k-no" class="listing-img">
+                    <div class="listing-body">
+                        <span class="price-badge">Premium Beach Resort</span>
+                        <h4 class="listing-title">Afamia Resort</h4>
+                        <p class="text-muted small mb-4">Resor pantai bintang lima termewah di Latakia. Terletak di semenanjung pribadi, menawarkan fasilitas kolam renang infinity berkelas dunia, spa relaksasi, vila tepi laut, dan pemandangan matahari terbenam langsung ke Laut Mediterania.</p>
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g297903-d1542344-Reviews-Afamia_Hotel_Resort-Lattakia_Lattakia_Governorate.html" class="btn btn-outline-dark mt-auto w-100 fw-bold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="listing-card luxury">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/07/91/77/vue.jpg?w=600&h=600&s=1" class="listing-img">
+                    <div class="listing-body">
+                        <span class="price-badge">Seaside Classic</span>
+                        <h4 class="listing-title">Lamira Hotel</h4>
+                        <p class="text-muted small mb-4">Hotel megah bergaya klasik dengan pemandangan laut biru yang menakjubkan. Menawarkan layanan hospitality berkelas, dekat dengan pusat hiburan malam pesisir, dan memiliki restoran seafood yang lezat.</p>
+                        <a href="https://www.tripadvisor.co.id/Hotel_Review-g297903-d301539-Reviews-La_Mira_Hotel_and_Resort-Lattakia_Lattakia_Governorate.html" class="btn btn-outline-dark mt-auto w-100 fw-bold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="listing-card budget">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1h7extpAgNBCc6RKDXvIuxFo1dPvc6fK1uAcNpSI9fF9ZEmLxxWkHX1Zp&s=10" class="listing-img">
+                    <div class="listing-body">
+                        <span class="price-badge">Budget Coast</span>
+                        <h4 class="listing-title">Blue Beach Hotel</h4>
+                        <p class="text-muted small mb-4">Pilihan penginapan modern yang bersih, efisien, dan ramah kantong di sepanjang garis Pantai Biru (Cote d'Azur). Sangat cocok untuk keluarga atau pelancong mandiri yang ingin berlibur hemat di tepi laut.</p>
+                        <a href="https://www.tripadvisor.com/Attraction_Review-g297903-d634536-Reviews-Blue_Beach-Lattakia_Lattakia_Governorate.html" class="btn btn-outline-dark mt-auto w-100 fw-bold">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mb-4">✨ Must-Visit Unique Spots</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="listing-card tour flex-md-row">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Ugarit_Corbel.jpg" alt="The Ancient Kingdom of Ugarit" class="image_tours">
+                    <div class="listing-body justify-content-center">
+                        <h4 class="listing-title fs-5">The Ancient Kingdom of Ugarit</h4>
+                        <p class="text-muted small mb-0">Situs reruntuhan kota pelabuhan zaman perunggu (Ras Shamra). Di sinilah tempat para arkeolog menemukan lempengan tanah liat legendaris yang memuat baris tulisan Alfabet Ugarit—sistem penulisan alfabet tertua di dunia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="listing-card tour flex-md-row">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Latakia_downtown_view_%28cropped%29.jpg/1280px-Latakia_downtown_view_%28cropped%29.jpg" alt="Latakia Corniche" class="image_tours">
+                    <div class="listing-body justify-content-center">
+                        <h4 class="listing-title fs-5">Latakia Corniche (The Promenade)</h4>
+                        <p class="text-muted small mb-0">Jalur pedestrian panjang di sepanjang pesisir pantai kota. Tempat paling santai untuk berjalan kaki di sore hari sembari menikmati semilir angin laut Mediterania, menikmati kopi arabika di kafe lokal, dan menyaksikan aktivitas kapal pelabuhan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="listing-card tour flex-md-row">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Saladinsburg_22.jpg" alt="Saladin's Castle" class="image_tours">
+                    <div class="listing-body justify-content-center">
+                        <h4 class="listing-title fs-5">Saladin's Castle (Qal'at Salah al-Din)</h4>
+                        <p class="text-muted small mb-0">Benteng kokoh yang bertengger mengagumkan di atas bukit pegunungan pinus di luar kota Latakia. Keunikan utamanya adalah parit raksasa sedalam 28 meter yang dipahat langsung ke dalam tebing batu utuh oleh para ksatria zaman dulu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="listing-card tour flex-md-row">
+                    <img src="https://sandee.com/_next/image?url=https%3A%2F%2Fcdn.sandee.com%2F46650_1650_1100.avif&w=3840&q=75" alt="Cote d'Azur Beach" class="image_tours">
+                    <div class="listing-body justify-content-center">
+                        <h4 class="listing-title fs-5">Cote d'Azur Beach (Pantai Biru)</h4>
+                        <p class="text-muted small mb-0">Kawasan wisata pantai paling populer di Suriah dengan air laut biru jernih yang tenang dan pasir putih halus. Tempat ideal untuk berenang, bersantai di bawah payung pantai, atau mencoba aktivitas olahraga air seperti jet ski.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

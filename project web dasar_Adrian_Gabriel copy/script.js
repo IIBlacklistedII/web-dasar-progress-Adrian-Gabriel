@@ -58,13 +58,13 @@ const sharedNavbarLayout = `
             <div class="custom-dropdown-menu">
                 <div class="menu-column">
                     <h3>Hotels</h3>
-                    <a href="https://www.tripadvisor.com/Hotels-g294010-zff12-Syria-Hotels.html">Luxury Hotels</a>
-                    <a href="https://www.trivago.com/en-US/otr/cheap-hotels-syria?search=101-2;200-191;so-1">Budget Hotels</a>
+                    <a href="#">Luxury Hotels</a>
+                    <a href="#">Budget Hotels</a>
                 </div>
                 <div class="menu-column">
                     <h3>Tours</h3>
-                    <a href="https://www.tripadvisor.com/Attractions-g294010-Activities-c42-t228-Syria.html">Historical Tours</a>
-                    <a href="https://en.tripadvisor.com.hk/Attractions-g294010-Activities-c57-Syria.html">Nature Tours</a>
+                    <a href="#">Historical Tours</a>
+                    <a href="#">Nature Tours</a>
                 </div>
             </div>
         </li>
@@ -101,16 +101,17 @@ const sharedFooterLayout = `
         <div id="footer-list" class="d-flex flex-column">
             <h3>Hotels & Tours</h3>
             <hr>
-            <a href="#">Damascus</a>
-            <a href="#">Aleppo</a>
-            <a href="#">Homs</a>
-            <a href="#">Hama</a>
-            <a href="#">Lattakia</a>
+            <a href="Damascus.html">Damascus</a>
+            <a href="Aleppo.html">Aleppo</a>
+            <a href="Homs.html">Homs</a>
+            <a href="Hama.html">Hama</a>
+            <a href="Lattakia.html">Lattakia</a>
         </div>
     </div>
 </footer>
 `;
 
+// Function to safely shut down open navigation mega-menus
 function closeAllDropdowns() {
     document.querySelectorAll('.custom-dropdown-menu.show-menu').forEach(menu => {
         menu.classList.remove('show-menu');
@@ -126,6 +127,7 @@ function initializeDropdowns() {
 
     dropdownButtons.forEach(function (btn) {
         btn.addEventListener('click', function (event) {
+            // Prevent link '#' jumping and stop event bubbling up to document click layers
             event.preventDefault();
             event.stopPropagation();
 
@@ -137,6 +139,7 @@ function initializeDropdowns() {
 
             const isOpen = targetMenu.classList.contains('show-menu');
 
+            // Close other open nav dropdown modules 
             closeAllDropdowns();
 
             // Toggle active menu state window
@@ -153,6 +156,7 @@ function initializeDropdowns() {
 
 document.addEventListener('DOMContentLoaded', function () {
     
+    // A. INJECT STABLE NAVBAR
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
         navbarPlaceholder.innerHTML = sharedNavbarLayout;
@@ -162,12 +166,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (navbarElement) {
             const currentPath = window.location.pathname;
             
-            if (currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
+            if (currentPath.endsWith('suriah.html') || currentPath.endsWith('/')) {
                 // Remove dark block background style on home page hero
                 navbarElement.classList.remove('navbar-dark-solid');
                 
                 // Track down and strip out the home navigation page links list object
-                const homeLink = navbarPlaceholder.querySelector('.nav-links li a[href="index.html"]');
+                const homeLink = navbarPlaceholder.querySelector('.nav-links a[href="suriah.html"]');
                 if (homeLink) {
                     const homeLi = homeLink.closest('li');
                     if (homeLi) homeLi.remove(); 
@@ -178,11 +182,13 @@ document.addEventListener('DOMContentLoaded', function () {
         initializeDropdowns();
     }
 
+    // B. INJECT STABLE FOOTER
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = sharedFooterLayout;
     }
 
+    // C. DOCUMENT GLOBAL CLOSING CLICK REGISTER
     document.addEventListener('click', function (event) {
         if (event.target.closest('.custom-dropbtn') || event.target.closest('.custom-dropdown-menu')) {
             return; 
@@ -194,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape') closeAllDropdowns();
     });
 
+    // D. MAP SELECTION ACTION MODIFIER
     const branchSelector = document.getElementById('branchSelector');
     if (branchSelector) {
         const branchPres = document.getElementById('branch-president');
@@ -261,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const feedbackAlert = document.getElementById('feedback-alert');
     const nextBtn = document.getElementById('next-question-btn');
 
+    // CRITICAL GUARD: Only execute quiz logic if the form markup actually exists on this page
     if (!quizForm || !questionElement || !optionsContainer) {
         return; 
     }
@@ -278,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const qData = quizQuestions[currentQuestionIndex];
         questionElement.textContent = `Q${currentQuestionIndex + 1}: ${qData.question}`;
         
+        // Clear previous entries
         optionsContainer.innerHTML = '';
         
         // Load option nodes
@@ -289,8 +298,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Initialize first question on load securely
     loadQuizQuestion(); 
 
+    // Handle form submissions safely
     quizForm.addEventListener('submit', function (e) {
         e.preventDefault();
         
@@ -323,17 +334,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Calculating final percentage scores
+    // Handle changing questions safely or calculating final percentage scores
     if (nextBtn) {
         nextBtn.addEventListener('click', function () {
             if (currentQuestionIndex < quizQuestions.length - 1) {
-                // Advance to the next question
+                // Advance to the next question frame
                 currentQuestionIndex++;
                 loadQuizQuestion();
             } else {
                 // End of quiz reached: Calculate the total final score percentage
                 const finalPercentage = Math.round((correctAnswersCount / quizQuestions.length) * 100);
                 
+                // Redesign container interface to display clean summary sheet metrics
                 questionElement.innerHTML = `🏁 Quiz Complete!`;
                 optionsContainer.innerHTML = `
                     <div class="text-center py-3">
@@ -342,6 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `;
                 
+                // Strip the operational controls away and leave a clean reset loop option
                 if (feedbackContainer) feedbackContainer.classList.add('d-none');
                 
                 const submitBtn = quizForm.querySelector('button[type="submit"]');
@@ -349,11 +362,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     submitBtn.disabled = false;
                     submitBtn.textContent = "🔄 Retake Quiz";
                     
+                    // Rewrite submit button function to reset memory array counters cleanly
                     quizForm.onsubmit = function(event) {
                         event.preventDefault();
                         currentQuestionIndex = 0;
                         correctAnswersCount = 0;
-                        quizForm.onsubmit = null;
+                        quizForm.onsubmit = null; // Unbind override logic hook
                         loadQuizQuestion();
                     };
                 }
