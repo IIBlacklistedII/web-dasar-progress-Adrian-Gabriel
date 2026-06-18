@@ -88,14 +88,15 @@ const sharedFooterLayout = `
         <div id="footer-list" class="d-flex flex-column">
             <h3>Attractions</h3>
             <hr>
-            <a href="#">Aleppo Citadel</a>
-            <a href="#">Crac des Chevaliers</a>
-            <a href="#">Dead Sea</a>
-            <a href="#">Orontes River</a>
-            <a href="#">Al-Ghab Plain</a>
-            <a href="#">Damascus Old City</a>
-            <a href="#">Hama Water Wheels</a>
-            <a href="#">Bosra Theater</a>
+            <a href="https://whc.unesco.org/en/list/23/">Palmyra</a>
+            <a href="https://whc.unesco.org/en/list/21">Aleppo Citadel</a>
+            <a href="https://whc.unesco.org/en/list/1229">Crac des Chevaliers</a>
+            <a href="https://en.wikipedia.org/wiki/Ghab_Plain">Jabal an-Nusayriyah</a>
+            <a href="https://en.wikipedia.org/wiki/Orontes_River">Orontes River</a>
+            <a href="https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range">Al-Ghab Plain</a>
+            <a href="https://whc.unesco.org/en/list/20/">Damascus Old City</a>
+            <a href="https://en.wikipedia.org/wiki/Norias_of_Hama">Hama Water Wheels</a>
+            <a href="https://whc.unesco.org/en/list/22/">Bosra Old City</a>
         </div>
         <div id="footer-list" class="d-flex flex-column">
             <h3>Hotels & Tours</h3>
