@@ -56,14 +56,12 @@ const sharedNavbarLayout = `
             <a href="#" class="custom-dropbtn">Hotels & Tours</a>
             <div class="custom-dropdown-menu">
                 <div class="menu-column">
-                    <h3>Hotels</h3>
-                    <a href="https://www.tripadvisor.com/Hotels-g294010-zff12-Syria-Hotels.html">Luxury Hotels</a>
-                    <a href="https://www.trivago.com/en-US/otr/cheap-hotels-syria?search=101-2;200-191;so-1">Budget Hotels</a>
-                </div>
-                <div class="menu-column">
-                    <h3>Tours</h3>
-                    <a href="https://www.tripadvisor.com/Attractions-g294010-Activities-c42-t228-Syria.html">Historical Tours</a>
-                    <a href="https://en.tripadvisor.com.hk/Attractions-g294010-Activities-c57-Syria.html">Nature Tours</a>
+                    <h3>Hotels & Tours</h3>
+                    <a href="damascus.html">Damascus</a>
+                    <a href="aleppo.html">Aleppo</a>
+                    <a href="homs.html">Homs</a>
+                    <a href="hama.html">Hama</a>
+                    <a href="lattakia.html">Lattakia</a>
                 </div>
             </div>
         </li>
@@ -71,9 +69,108 @@ const sharedNavbarLayout = `
 </nav>
 `;
 
+const sharedNavbarLayoutMobile = `
+<nav class="navbar navbar-expand-lg navbar-dark-solid">
+    <div class="container-fluid">
+        <!-- BRAND LOGO AND NAME -->
+        <div class="logo d-flex align-items-center">
+            <img src="Emblem_of_Syria.svg" class="img-fluid me-2" style="max-height: 40px;" alt="Emblem of Syria">
+            <a class="navbar-brand m-0" href="index.html">SURIAH</a>
+        </div>
+
+        <button class="navbar-toggler text-white" type="button" data-bs-theme="dark" data-bs-toggle="collapse" data-bs-target="#mainNavbarAccordion" aria-controls="mainNavbarAccordion" aria-expanded="false" aria-controls="mainNavbarAccordion" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbarAccordion">
+            <div class="accordion w-100 d-lg-flex justify-content-end border-0 bg-transparent" id="navAccordion">
+                
+                <div class="accordion-item bg-transparent border-0 mx-lg-2">
+                    <h2 class="accordion-header id="headingGeneral">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none px-0 py-2 py-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral" aria-expanded="false" aria-controls="collapseGeneral">
+                            General Information
+                        </button>
+                    </h2>
+                    <div id="collapseGeneral" class="accordion-collapse collapse" aria-labelledby="headingGeneral" data-bs-parent="#navAccordion">
+                        <div class="accordion-body custom-dropdown-menu d-flex flex-column flex-lg-row gap-3 p-3 p-lg-4">
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Syria at a glance</h3>
+                                <a href="pemerintahan.html">Current Government</a>
+                                <a href="about.html">About Syria Tourism Board</a>
+                            </div>
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Getting around</h3>
+                                <a href="transportasi-darat.html">Ground Transport</a>
+                                <a href="transportasi-air-laut.html">Air & Water Transport</a>
+                            </div>
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Basics</h3>
+                                <a href="entrance-fee.html">Entrance Fees</a>
+                                <a href="visas.html">Visas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent border-0 mx-lg-2">
+                    <h2 class="accordion-header" id="headingAttractionsNav">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none px-0 py-2 py-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAttractionsNav" aria-expanded="false" aria-controls="collapseAttractionsNav">
+                            Attractions
+                        </button>
+                    </h2>
+                    <div id="collapseAttractionsNav" class="accordion-collapse collapse" aria-labelledby="headingAttractionsNav" data-bs-parent="#navAccordion">
+                        <div class="accordion-body custom-dropdown-menu d-flex flex-column flex-lg-row gap-3 p-3 p-lg-4">
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Historical Sites</h3>
+                                <a href="https://whc.unesco.org/en/list/23/">Palmyra</a>
+                                <a href="https://whc.unesco.org/en/list/21">Aleppo Citadel</a>
+                                <a href="https://whc.unesco.org/en/list/1229">Crac des Chevaliers</a>
+                            </div>
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Natural Wonders</h3>
+                                <a href="https://en.wikipedia.org/wiki/Ghab_Plain">Jabal an-Nusayriyah</a>
+                                <a href="https://en.wikipedia.org/wiki/Orontes_River">Orontes River</a>
+                                <a href="https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range">Al-Ghab Plain</a>
+                            </div>
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Cultural Experiences</h3>
+                                <a href="https://whc.unesco.org/en/list/20/">Damascus Old City</a>
+                                <a href="https://en.wikipedia.org/wiki/Norias_of_Hama">Hama Water Wheels</a>
+                                <a href="https://whc.unesco.org/en/list/22/">Bosra Old City</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent border-0 mx-lg-2">
+                    <h2 class="accordion-header" id="headingHotelsNav">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none px-0 py-2 py-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHotelsNav" aria-expanded="false" aria-controls="collapseHotelsNav">
+                            Hotels & Tours
+                        </button>
+                    </h2>
+                    <div id="collapseHotelsNav" class="accordion-collapse collapse" aria-labelledby="headingHotelsNav" data-bs-parent="#navAccordion">
+                        <div class="accordion-body custom-dropdown-menu d-flex flex-column flex-lg-row gap-3 p-3 p-lg-4">
+                            <div class="menu-column d-flex flex-column">
+                                <h3>Hotels & Tours</h3>
+                                <a href="damascus.html">Damascus</a>
+                                <a href="aleppo.html">Aleppo</a>
+                                <a href="homs.html">Homs</a>
+                                <a href="hama.html">Hama</a>
+                                <a href="lattakia.html">Lattakia</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+`;
+
 const sharedFooterLayout = `
 <footer class="bagian-footer">
-    <div class="d-flex flex-row justify-content-around gap-1">
+    <div class="d-flex justify-content-around gap-1" id="footer-details">
         <div id="footer-list" class="d-flex flex-column">
             <h3>About Syria</h3>
             <hr>
@@ -105,6 +202,68 @@ const sharedFooterLayout = `
             <a href="homs.html">Homs</a>
             <a href="hama.html">Hama</a>
             <a href="lattakia.html">Lattakia</a>
+        </div>
+    </div>
+</footer>
+`;
+
+const sharedFooterLayoutMobile = `
+<footer class="bagian-footer">
+    <div class="accordion" id="footerAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingAbout">
+                <button class="accordion-button collapsed bg-transparent text-reset shadow-none p-0 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
+                    About Syria
+                </button>
+            </h2>
+            <div id="collapseAbout" class="accordion-collapse collapse" aria-labelledby="headingAbout" data-bs-parent="#footerAccordion">
+                <div class="accordion-body d-flex flex-column">
+                    <a href="history.html">History</a>
+                    <a href="culture.html">Culture</a>
+                    <a href="traditions">Traditions</a>
+                    <a href="geography">Geography</a>
+                    <a href="tourism.html">Tourism</a>
+                    <a href="visas.html">Visas & Immigration</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingAttractions">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAttractions" aria-expanded="false" aria-controls="collapseAttractions">
+                    Attractions
+                </button>
+            </h2>
+            <div id="collapseAttractions" class="accordion-collapse collapse" aria-labelledby="headingAttractions" data-bs-parent="#footerAccordion">
+                <div class="accordion-body d-flex flex-column">
+                    <a href="https://whc.unesco.org/en/list/23/">Palmyra</a>
+                    <a href="https://whc.unesco.org/en/list/21">Aleppo Citadel</a>
+                    <a href="https://whc.unesco.org/en/list/1229">Crac des Chevaliers</a>
+                    <a href="https://en.wikipedia.org/wiki/Ghab_Plain">Jabal an-Nusayriyah</a>
+                    <a href="https://en.wikipedia.org/wiki/Orontes_River">Orontes River</a>
+                    <a href="https://en.wikipedia.org/wiki/Syrian_Coastal_Mountain_Range">Al-Ghab Plain</a>
+                    <a href="https://whc.unesco.org/en/list/20/">Damascus Old City</a>
+                    <a href="https://en.wikipedia.org/wiki/Norias_of_Hama">Hama Water Wheels</a>
+                    <a href="https://whc.unesco.org/en/list/22/">Bosra Old City</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingHotels">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHotels" aria-expanded="false" aria-controls="collapseHotels">
+                    Hotels & Tours
+                </button>
+            </h2>
+            <div id="collapseHotels" class="accordion-collapse collapse" aria-labelledby="headingHotels" data-bs-parent="#footerAccordion">
+                <div class="accordion-body d-flex flex-column">
+                    <a href="damascus.html">Damascus</a>
+                    <a href="aleppo.html">Aleppo</a>
+                    <a href="homs.html">Homs</a>
+                    <a href="hama.html">Hama</a>
+                    <a href="lattakia.html">Lattakia</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -151,10 +310,15 @@ function initializeDropdowns() {
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+    const mediaQuery = window.matchMedia('(max-width: 992px)').matches;
+
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
         navbarPlaceholder.innerHTML = sharedNavbarLayout;
+
+        if (mediaQuery) {
+        navbarPlaceholder.innerHTML = sharedNavbarLayoutMobile;
+        }
 
         // Custom Layout Modifications for Home Page specifically
         const navbarElement = navbarPlaceholder.querySelector('.navbar');
@@ -166,6 +330,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navbarElement.classList.remove('navbar-dark-solid');
             }
         }
+
         // Initialize menu toggles since navbar elements exist now
         initializeDropdowns();
     }
@@ -173,6 +338,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = sharedFooterLayout;
+        
+        if (mediaQuery) {
+            footerPlaceholder.innerHTML = sharedFooterLayoutMobile;
+        }
     }
 
     document.addEventListener('click', function (event) {

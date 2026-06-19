@@ -109,6 +109,20 @@
     color: #fc0 !important;
 }
 
+@media (max-width: 768px) {
+    #footer-details {
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .navAccordion .accordion-item {
+        background-color: transparent;
+        border: none;
+        color:#ccc;
+        border-bottom: 1px solid #fc0;
+    }
+}
+
 /* ==========================================================================
    Footer Enhancements & Link States
    ========================================================================== */
@@ -145,6 +159,49 @@
 
 .bagian-footer a:hover {
     color: #fc0 !important;
+}
+
+
+@media (max-width: 768px) {
+    #footer-details {
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .bagian-footer .accordion-item {
+        background-color: transparent;
+        border: none;
+        color:#ccc;
+        border-bottom: 1px solid #fc0;
+    }
+
+    .bagian-footer .accordion-button {
+        background-color: transparent;
+        color: inherit;
+        font-size: 1.17em;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        color: #ccc;
+    }
+
+    .bagian-footer .accordion-button:not(.collapsed) {
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+    }
+
+    .bagian-footer .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+
+    .bagian-footer .accordion-button {
+        color: #ffffff !important;
+    }
+
+    .bagian-footer .accordion-button:not(.collapsed) {
+        color: #ffffff !important; 
+    }
 }
 
 /* ==========================================================================
@@ -247,7 +304,7 @@
     position: relative;
     z-index: 4;
     max-height: 0;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.35s ease;
     }
