@@ -164,13 +164,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
                 // Remove dark block background style on home page hero
                 navbarElement.classList.remove('navbar-dark-solid');
-                
-                // Track down and strip out the home navigation page links list object
-                const homeLink = navbarPlaceholder.querySelector('.nav-links li a[href="index.html"]');
-                if (homeLink) {
-                    const homeLi = homeLink.closest('li');
-                    if (homeLi) homeLi.remove(); 
-                }
             }
         }
         // Initialize menu toggles since navbar elements exist now
