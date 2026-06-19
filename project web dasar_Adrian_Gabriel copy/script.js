@@ -204,6 +204,9 @@ const sharedFooterLayout = `
             <a href="lattakia.html">Lattakia</a>
         </div>
     </div>
+    <div>
+        <h3 class="fs-5 bagian-footer">Made by: 2572053 / 2572054</h3>
+    </div>
 </footer>
 `;
 
