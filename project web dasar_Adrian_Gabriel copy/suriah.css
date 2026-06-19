@@ -679,6 +679,62 @@
     filter: none;
 }
 
+@media (max-width: 768px) {
+
+    #card-title {
+        font-size: 2.2rem;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .bg-card {
+        min-height: 450px;
+    }
+
+    .card-details {
+        position: relative;
+        z-index: 4;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.35s ease;
+    }
+
+    .org-branches {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .org-branch::before,
+    .org-branch::after {
+        content: none !important;
+    }
+
+    .org-connector-vertical {
+        height: 50px;
+        border-left: 2px solid #ccc;
+        margin: 0 auto;
+    }
+
+
+    .org-branch:not(:last-child) .org-node {
+        position: relative;
+
+        .org-branch:not(:last-child) .org-node::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+    }
+}
+
 /* ==========================================================================
    About Ground Transportation Page (transportasi-darat.html) Styles
 ========================================================================== */
