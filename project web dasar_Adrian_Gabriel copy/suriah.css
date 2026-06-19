@@ -77,6 +77,7 @@
 
 .custom-dropdown-menu.show-menu {
     display: flex !important;
+    flex-wrap: wrap;
 }
 
 .menu-column {
