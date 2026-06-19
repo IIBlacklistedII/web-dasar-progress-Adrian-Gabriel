@@ -176,8 +176,8 @@ const sharedFooterLayout = `
             <hr>
             <a href="history.html">History</a>
             <a href="culture.html">Culture</a>
-            <a href="traditions">Traditions</a>
-            <a href="geography">Geography</a>
+            <a href="traditions.html">Traditions</a>
+            <a href="geography.html">Geography</a>
             <a href="tourism.html">Tourism</a>
             <a href="visas.html">Visas & Immigration</a>
         </div>
